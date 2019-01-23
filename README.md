@@ -1,2 +1,2 @@
-# XGraph
+# XRend
 Rendering Engine
