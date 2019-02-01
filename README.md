@@ -1,2 +1,2 @@
-# XRend
+# XRendR
 Rendering Engine
