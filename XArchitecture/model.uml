@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_SljZwC-KEemTK83giqrJTA" name="XQ">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_SoYEQC-KEemTK83giqrJTA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_dNfo0C-KEemTK83giqrJTA" name="IXWindowingSystem" isAbstract="true">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_sFH7YDD-EemPSJ3g7P3waw" annotatedElement="_dNfo0C-KEemTK83giqrJTA">
+      <body>The interface to handle the windowing system operations</body>
+    </ownedComment>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_bLzBQDETEemPSJ3g7P3waw" name="initSystem" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_3y22YDEVEemPSJ3g7P3waw" annotatedElement="_bLzBQDETEemPSJ3g7P3waw">
+        <body>Initializes the windowing system</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wpwFsDEVEemPSJ3g7P3waw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dyPiQDEXEemPSJ3g7P3waw" name="swapBuffers" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_dyPiQTEXEemPSJ3g7P3waw" annotatedElement="_dyPiQDEXEemPSJ3g7P3waw">
+        <body>Swaps the front and back buffers in order to show the new frame</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dyPiQjEXEemPSJ3g7P3waw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rsU3gDEXEemPSJ3g7P3waw" name="processSystemEvents" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_rsU3gTEXEemPSJ3g7P3waw" annotatedElement="_rsU3gDEXEemPSJ3g7P3waw">
+        <body>Polls all events comming from the system and processes them</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_rsU3gjEXEemPSJ3g7P3waw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_A6zAYDEYEemPSJ3g7P3waw" name="shutdownSystem" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_A6zAYTEYEemPSJ3g7P3waw" annotatedElement="_A6zAYDEYEemPSJ3g7P3waw">
+        <body>Stops the rendering and de-initializes all data</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_A6zAYjEYEemPSJ3g7P3waw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PbDFIDEVEemPSJ3g7P3waw" name="XCommonTypedefs">
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_UiccwDEVEemPSJ3g7P3waw" name="XVoid">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_fAWmEDEVEemPSJ3g7P3waw" annotatedElement="_UiccwDEVEemPSJ3g7P3waw">
+        <body>typedef void XVoid</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a1Th8DEVEemPSJ3g7P3waw" name="XFloat">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_i9o7ADEVEemPSJ3g7P3waw" annotatedElement="_a1Th8DEVEemPSJ3g7P3waw">
+        <body>typedef GLFloat XFloat</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kXXHADEVEemPSJ3g7P3waw" name="XInt">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kXXHATEVEemPSJ3g7P3waw" annotatedElement="_kXXHADEVEemPSJ3g7P3waw">
+        <body>typedef GLint XInt</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CU7o0DOZEemHGoXhG_mZKw" name="XUniquePtr">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_CU7o0TOZEemHGoXhG_mZKw" annotatedElement="_CU7o0DOZEemHGoXhG_mZKw">
+        <body>template&lt; typename T >&#xD;
+using XUniqueVector = std::unique_ptr&lt;T>;</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MztfYDOaEemHGoXhG_mZKw" name="XVector">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_MztfYTOaEemHGoXhG_mZKw" annotatedElement="_MztfYDOaEemHGoXhG_mZKw">
+        <body>template&lt; typename T >&#xD;
+using XVector = std::vector&lt;T>;</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_SVCZ8DOaEemHGoXhG_mZKw" name="XString">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_SVCZ8TOaEemHGoXhG_mZKw" annotatedElement="_SVCZ8DOaEemHGoXhG_mZKw">
+        <body>typedef std::string XString</body>
+      </ownedComment>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_pIRokDOXEemHGoXhG_mZKw" name="XWindowProperties">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_7aQ8wDOYEemHGoXhG_mZKw" annotatedElement="_pIRokDOXEemHGoXhG_mZKw">
+      <body>Provides common properties of a window to be used for rendering</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_y78ocDOfEemHGoXhG_mZKw" name="mWindowPropertiesImpl" visibility="private" type="_CU7o0DOZEemHGoXhG_mZKw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_V9C34DOZEemHGoXhG_mZKw" name="getWindowWidth">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_erB7sDOZEemHGoXhG_mZKw" annotatedElement="_V9C34DOZEemHGoXhG_mZKw">
+        <body>Gets the height of the window</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_kmPV4DOZEemHGoXhG_mZKw" type="_a1Th8DEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_62bacDOZEemHGoXhG_mZKw" name="getWindowHeight">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_62bacTOZEemHGoXhG_mZKw" annotatedElement="_62bacDOZEemHGoXhG_mZKw">
+        <body>Gets the height of the window</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_62bacjOZEemHGoXhG_mZKw" type="_a1Th8DEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_BOz40DOaEemHGoXhG_mZKw" name="getWindowTitle">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_BOz40TOaEemHGoXhG_mZKw" annotatedElement="_BOz40DOaEemHGoXhG_mZKw">
+        <body>Gets the title of the window</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_BOz40jOaEemHGoXhG_mZKw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_z8_oADOaEemHGoXhG_mZKw" name="XWindowPropertiesImpl">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_8R1zEDOaEemHGoXhG_mZKw" annotatedElement="_z8_oADOaEemHGoXhG_mZKw">
+      <body>The private part of the XWindowProperties class</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_93WYUDOaEemHGoXhG_mZKw" name="mWindowWidth" visibility="private" type="_a1Th8DEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_HXdcoDObEemHGoXhG_mZKw" annotatedElement="_93WYUDOaEemHGoXhG_mZKw">
+        <body>The width of the window</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_K7gyMDObEemHGoXhG_mZKw" name="mWindowHeight" visibility="private" type="_a1Th8DEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_K7gyMTObEemHGoXhG_mZKw" annotatedElement="_K7gyMDObEemHGoXhG_mZKw">
+        <body>The height of the window</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_sz9WgDOfEemHGoXhG_mZKw" name="mWindowTitle" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_sz9WgTOfEemHGoXhG_mZKw" annotatedElement="_sz9WgDOfEemHGoXhG_mZKw">
+        <body>The title of the window</body>
+      </ownedComment>
+    </ownedAttribute>
+  </packagedElement>
+</uml:Model>
