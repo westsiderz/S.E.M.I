@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_SljZwC-KEemTK83giqrJTA" name="XQ">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_SljZwC-KEemTK83giqrJTA" name="XQ">
   <packageImport xmi:type="uml:PackageImport" xmi:id="_SoYEQC-KEemTK83giqrJTA">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
@@ -66,11 +66,23 @@ using XVector = std::vector&lt;T>;</body>
       </ownedComment>
     </packagedElement>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_6QMDIDREEem9jI_jcJnhpA" name="XThirdPartyTypes">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_BX8I8DRFEem9jI_jcJnhpA" annotatedElement="_6QMDIDREEem9jI_jcJnhpA">
+      <body>For the third party libraries types</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_E8vFYDRFEem9jI_jcJnhpA" name="GLFWwindow"/>
+  </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_pIRokDOXEemHGoXhG_mZKw" name="XWindowProperties">
     <ownedComment xmi:type="uml:Comment" xmi:id="_7aQ8wDOYEemHGoXhG_mZKw" annotatedElement="_pIRokDOXEemHGoXhG_mZKw">
       <body>Provides common properties of a window to be used for rendering</body>
     </ownedComment>
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_y78ocDOfEemHGoXhG_mZKw" name="mWindowPropertiesImpl" visibility="private" type="_CU7o0DOZEemHGoXhG_mZKw"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_OzbKkTQtEem9jI_jcJnhpA" name="mWindowPropertiesImpl" visibility="private" type="_z8_oADOaEemHGoXhG_mZKw" association="_OzZ8cDQtEem9jI_jcJnhpA">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_9R8bYDQtEem9jI_jcJnhpA" annotatedElement="_OzbKkTQtEem9jI_jcJnhpA">
+        <body>Unique pointer to PIMPL Implementation</body>
+      </ownedComment>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OzbxoDQtEem9jI_jcJnhpA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OzbxoTQtEem9jI_jcJnhpA" value="1"/>
+    </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_V9C34DOZEemHGoXhG_mZKw" name="getWindowWidth">
       <ownedComment xmi:type="uml:Comment" xmi:id="_erB7sDOZEemHGoXhG_mZKw" annotatedElement="_V9C34DOZEemHGoXhG_mZKw">
         <body>Gets the height of the window</body>
@@ -89,8 +101,16 @@ using XVector = std::vector&lt;T>;</body>
       </ownedComment>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_BOz40jOaEemHGoXhG_mZKw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
     </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XnWYIDRKEem9jI_jcJnhpA" name="XWindowProperties">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_c1YjQDRKEem9jI_jcJnhpA" annotatedElement="_XnWYIDRKEem9jI_jcJnhpA">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iJQQoDRKEem9jI_jcJnhpA" name="aWindowWidth" type="_a1Th8DEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nndlwDRKEem9jI_jcJnhpA" name="aWindowHeight" type="_a1Th8DEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_vF6UUDRKEem9jI_jcJnhpA" name="aWindowTitle" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+    </ownedOperation>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_z8_oADOaEemHGoXhG_mZKw" name="XWindowPropertiesImpl">
+  <packagedElement xmi:type="uml:Class" xmi:id="_z8_oADOaEemHGoXhG_mZKw" name="XWindowPropertiesImpl" visibility="private">
     <ownedComment xmi:type="uml:Comment" xmi:id="_8R1zEDOaEemHGoXhG_mZKw" annotatedElement="_z8_oADOaEemHGoXhG_mZKw">
       <body>The private part of the XWindowProperties class</body>
     </ownedComment>
@@ -109,5 +129,70 @@ using XVector = std::vector&lt;T>;</body>
         <body>The title of the window</body>
       </ownedComment>
     </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_OzZ8cDQtEem9jI_jcJnhpA" memberEnd="_OzbKkTQtEem9jI_jcJnhpA _OzbxojQtEem9jI_jcJnhpA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OzajgDQtEem9jI_jcJnhpA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OzbKkDQtEem9jI_jcJnhpA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_TmFy4DQuEem9jI_jcJnhpA" annotatedElement="_OzZ8cDQtEem9jI_jcJnhpA">
+      <body>XUniquePtr&lt;XWindowPropertiesImpl></body>
+    </ownedComment>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_OzbxojQtEem9jI_jcJnhpA" name="XWindowPropertiesImpl" type="_pIRokDOXEemHGoXhG_mZKw" association="_OzZ8cDQtEem9jI_jcJnhpA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_H4tJQDQvEem9jI_jcJnhpA" name="IXExtensionsLoadingLibrary" isAbstract="true">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Vmu_gDQvEem9jI_jcJnhpA" annotatedElement="_H4tJQDQvEem9jI_jcJnhpA">
+      <body>The interface is used to provide methods for loading OpenGL extensions</body>
+    </ownedComment>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_dcrBADQvEem9jI_jcJnhpA" name="initExtensionsLoadingLibrary" isAbstract="true">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_nQ_awDQvEem9jI_jcJnhpA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tbkGoDQvEem9jI_jcJnhpA" name="XGl3wExtensionsLoadingLibrary">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_W8fcEDQwEem9jI_jcJnhpA" annotatedElement="_tbkGoDQvEem9jI_jcJnhpA">
+      <body>The class is providing methods for the initialization of the GL3W library</body>
+    </ownedComment>
+    <generalization xmi:type="uml:Generalization" xmi:id="_1i92IDQwEem9jI_jcJnhpA" general="_H4tJQDQvEem9jI_jcJnhpA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3vePUDRDEem9jI_jcJnhpA" name="XGlfwWindowingSystem">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_FyCyMDREEem9jI_jcJnhpA" annotatedElement="_3vePUDRDEem9jI_jcJnhpA">
+      <body>The class handles the windowing system operations using the GLFW library</body>
+    </ownedComment>
+    <generalization xmi:type="uml:Generalization" xmi:id="_8kuHADRDEem9jI_jcJnhpA" general="_dNfo0C-KEemTK83giqrJTA"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wHAXMDRFEem9jI_jcJnhpA" name="mGlfwWindowingSystemImpl" visibility="private" type="_mjcywDREEem9jI_jcJnhpA" association="_wG-iADRFEem9jI_jcJnhpA">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_jjCD0DRGEem9jI_jcJnhpA" annotatedElement="_wHAXMDRFEem9jI_jcJnhpA">
+        <body>Unique pointer to PIMPL Implementation</body>
+      </ownedComment>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wHAXMTRFEem9jI_jcJnhpA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wHAXMjRFEem9jI_jcJnhpA" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yApSADRIEem9jI_jcJnhpA" name="XGlfwWindowingSystem">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_3S09UDRIEem9jI_jcJnhpA" annotatedElement="_yApSADRIEem9jI_jcJnhpA">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PNNS0DRJEem9jI_jcJnhpA" name="aWindowProperties" type="_pIRokDOXEemHGoXhG_mZKw">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_PNNS0TRJEem9jI_jcJnhpA" annotatedElement="_PNNS0DRJEem9jI_jcJnhpA">
+          <body>The properties of the window to draw on</body>
+        </ownedComment>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_t7wDwDRJEem9jI_jcJnhpA" name="aExtensionsLoadingLibrary" type="_H4tJQDQvEem9jI_jcJnhpA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mjcywDREEem9jI_jcJnhpA" name="XGlfwWindowingSystemImpl" visibility="private">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_t44IMDREEem9jI_jcJnhpA" annotatedElement="_mjcywDREEem9jI_jcJnhpA">
+      <body>The private part of the XGlfwWindowingSystem class</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Oh5o0DRFEem9jI_jcJnhpA" name="mWindow" visibility="private" type="_E8vFYDRFEem9jI_jcJnhpA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLqCMDRFEem9jI_jcJnhpA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eGTx4DRFEem9jI_jcJnhpA" name="mWindowProperties" visibility="private" type="_pIRokDOXEemHGoXhG_mZKw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wG-iADRFEem9jI_jcJnhpA" memberEnd="_wHAXMDRFEem9jI_jcJnhpA _wHAXMzRFEem9jI_jcJnhpA">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wG_wIDRFEem9jI_jcJnhpA" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wG_wITRFEem9jI_jcJnhpA" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_gphgEDRGEem9jI_jcJnhpA" annotatedElement="_wG-iADRFEem9jI_jcJnhpA">
+      <body>XUniquePtr&lt;XGlfwWindowingSystemImpl></body>
+    </ownedComment>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wHAXMzRFEem9jI_jcJnhpA" name="xglfwwindowingsystem" type="_3vePUDRDEem9jI_jcJnhpA" association="_wG-iADRFEem9jI_jcJnhpA"/>
   </packagedElement>
 </uml:Model>
