@@ -65,6 +65,22 @@ using XVector = std::vector&lt;T>;</body>
         <body>typedef std::string XString</body>
       </ownedComment>
     </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_VV2CcDZhEemwVeeG6mXgJQ" name="XChar">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_VV2pgDZhEemwVeeG6mXgJQ" annotatedElement="_VV2CcDZhEemwVeeG6mXgJQ">
+        <body>typedef GLchar XChar</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TMTtoDZiEemwVeeG6mXgJQ" name="XCharPtr">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_TMTtoTZiEemwVeeG6mXgJQ" annotatedElement="_TMTtoDZiEemwVeeG6mXgJQ">
+        <body>typedef XChar* XChar</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w0v1UDZmEemwVeeG6mXgJQ" name="XBool">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_w0v1UTZmEemwVeeG6mXgJQ" annotatedElement="_w0v1UDZmEemwVeeG6mXgJQ">
+        <body>typedef GLboolean XBool&#xD;
+</body>
+      </ownedComment>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_6QMDIDREEem9jI_jcJnhpA" name="XThirdPartyTypes">
     <ownedComment xmi:type="uml:Comment" xmi:id="_BX8I8DRFEem9jI_jcJnhpA" annotatedElement="_6QMDIDREEem9jI_jcJnhpA">
@@ -194,5 +210,33 @@ using XVector = std::vector&lt;T>;</body>
       <body>XUniquePtr&lt;XGlfwWindowingSystemImpl></body>
     </ownedComment>
     <ownedEnd xmi:type="uml:Property" xmi:id="_wHAXMzRFEem9jI_jcJnhpA" name="xglfwwindowingsystem" type="_3vePUDRDEem9jI_jcJnhpA" association="_wG-iADRFEem9jI_jcJnhpA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NfdxgDZgEemwVeeG6mXgJQ" name="XApplication">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_6D9loDZgEemwVeeG6mXgJQ" annotatedElement="_NfdxgDZgEemwVeeG6mXgJQ">
+      <body>This class handles the creation of the rendering application. It contains the main entry point function. The application handles the init/deinitialization of the rendering system, creation of the rendering context, the rendering itself, managing of the buffers, input handling and handling of internal messages and signals</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_QFoeUDZnEemwVeeG6mXgJQ" name="mXApplicationImpl" visibility="private" type="_6j73cDZmEemwVeeG6mXgJQ" association="_QFjl0DZnEemwVeeG6mXgJQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFq6kDZnEemwVeeG6mXgJQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFrhoDZnEemwVeeG6mXgJQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6j73cDZmEemwVeeG6mXgJQ" name="XApplicationImpl">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_LmojcDZnEemwVeeG6mXgJQ" annotatedElement="_6j73cDZmEemwVeeG6mXgJQ">
+      <body>These class holds the private part of the XApplication class and implements the PIMPL idiom</body>
+    </ownedComment>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CZHSsDZhEemwVeeG6mXgJQ" name="main" visibility="protected">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_OOaswDZhEemwVeeG6mXgJQ" type="_kXXHADEVEemPSJ3g7P3waw" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ss1Y0DZhEemwVeeG6mXgJQ" name="argc" type="_VV2CcDZhEemwVeeG6mXgJQ"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-85sDZiEemwVeeG6mXgJQ" name="argv" type="_TMTtoDZiEemwVeeG6mXgJQ"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nb_dkDZjEemwVeeG6mXgJQ" name="parseParameters" visibility="private">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_11mAYDZjEemwVeeG6mXgJQ" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QFjl0DZnEemwVeeG6mXgJQ" memberEnd="_QFoeUDZnEemwVeeG6mXgJQ _QFrhoTZnEemwVeeG6mXgJQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QFnQMDZnEemwVeeG6mXgJQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QFnQMTZnEemwVeeG6mXgJQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QFrhoTZnEemwVeeG6mXgJQ" name="xapplication" type="_NfdxgDZgEemwVeeG6mXgJQ" association="_QFjl0DZnEemwVeeG6mXgJQ"/>
   </packagedElement>
 </uml:Model>
