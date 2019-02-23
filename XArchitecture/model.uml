@@ -94,7 +94,7 @@ using XVector = std::vector&lt;T>;</body>
     </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_OzbKkTQtEem9jI_jcJnhpA" name="mWindowPropertiesImpl" visibility="private" type="_z8_oADOaEemHGoXhG_mZKw" association="_OzZ8cDQtEem9jI_jcJnhpA">
       <ownedComment xmi:type="uml:Comment" xmi:id="_9R8bYDQtEem9jI_jcJnhpA" annotatedElement="_OzbKkTQtEem9jI_jcJnhpA">
-        <body>Unique pointer to PIMPL Implementation</body>
+        <body>Unique_ptr to the private implementation of the class. PIMPL idiom.</body>
       </ownedComment>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OzbxoDQtEem9jI_jcJnhpA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OzbxoTQtEem9jI_jcJnhpA" value="1"/>
@@ -145,6 +145,14 @@ using XVector = std::vector&lt;T>;</body>
         <body>The title of the window</body>
       </ownedComment>
     </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hrQYEDeiEemxjIaGlGpK2Q" name="XWindowPropertiesImpl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_hrQYETeiEemxjIaGlGpK2Q" annotatedElement="_hrQYEDeiEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hrQYEjeiEemxjIaGlGpK2Q" name="aWindowWidth" type="_a1Th8DEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hrQYEzeiEemxjIaGlGpK2Q" name="aWindowHeight" type="_a1Th8DEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_hrQYFDeiEemxjIaGlGpK2Q" name="aWindowTitle" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_OzZ8cDQtEem9jI_jcJnhpA" memberEnd="_OzbKkTQtEem9jI_jcJnhpA _OzbxojQtEem9jI_jcJnhpA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OzajgDQtEem9jI_jcJnhpA" source="org.eclipse.papyrus">
@@ -176,7 +184,7 @@ using XVector = std::vector&lt;T>;</body>
     <generalization xmi:type="uml:Generalization" xmi:id="_8kuHADRDEem9jI_jcJnhpA" general="_dNfo0C-KEemTK83giqrJTA"/>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_wHAXMDRFEem9jI_jcJnhpA" name="mGlfwWindowingSystemImpl" visibility="private" type="_mjcywDREEem9jI_jcJnhpA" association="_wG-iADRFEem9jI_jcJnhpA">
       <ownedComment xmi:type="uml:Comment" xmi:id="_jjCD0DRGEem9jI_jcJnhpA" annotatedElement="_wHAXMDRFEem9jI_jcJnhpA">
-        <body>Unique pointer to PIMPL Implementation</body>
+        <body>Unique_ptr to the private implementation of the class. PIMPL idiom.</body>
       </ownedComment>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wHAXMTRFEem9jI_jcJnhpA"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wHAXMjRFEem9jI_jcJnhpA" value="1"/>
@@ -201,6 +209,17 @@ using XVector = std::vector&lt;T>;</body>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TLqCMDRFEem9jI_jcJnhpA"/>
     </ownedAttribute>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_eGTx4DRFEem9jI_jcJnhpA" name="mWindowProperties" visibility="private" type="_pIRokDOXEemHGoXhG_mZKw"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9zUO8DeiEemxjIaGlGpK2Q" name="XGlfwWindowingSystemImpl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_9zUO8TeiEemxjIaGlGpK2Q" annotatedElement="_9zUO8DeiEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_9zUO8jeiEemxjIaGlGpK2Q" name="aWindowProperties" type="_pIRokDOXEemHGoXhG_mZKw">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_9zUO8zeiEemxjIaGlGpK2Q" annotatedElement="_9zUO8jeiEemxjIaGlGpK2Q">
+          <body>The properties of the window to draw on</body>
+        </ownedComment>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_9zUO9DeiEemxjIaGlGpK2Q" name="aExtensionsLoadingLibrary" type="_H4tJQDQvEem9jI_jcJnhpA"/>
+    </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_wG-iADRFEem9jI_jcJnhpA" memberEnd="_wHAXMDRFEem9jI_jcJnhpA _wHAXMzRFEem9jI_jcJnhpA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wG_wIDRFEem9jI_jcJnhpA" source="org.eclipse.papyrus">
@@ -216,11 +235,14 @@ using XVector = std::vector&lt;T>;</body>
       <body>This class handles the creation of the rendering application. It contains the main entry point function. The application handles the init/deinitialization of the rendering system, creation of the rendering context, the rendering itself, managing of the buffers, input handling and handling of internal messages and signals</body>
     </ownedComment>
     <ownedAttribute xmi:type="uml:Property" xmi:id="_QFoeUDZnEemwVeeG6mXgJQ" name="mXApplicationImpl" visibility="private" type="_6j73cDZmEemwVeeG6mXgJQ" association="_QFjl0DZnEemwVeeG6mXgJQ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_TEb_ADeqEemxjIaGlGpK2Q" annotatedElement="_QFoeUDZnEemwVeeG6mXgJQ">
+        <body>Unique_ptr to the private implementation of the class. PIMPL idiom.</body>
+      </ownedComment>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QFq6kDZnEemwVeeG6mXgJQ"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QFrhoDZnEemwVeeG6mXgJQ" value="1"/>
     </ownedAttribute>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_6j73cDZmEemwVeeG6mXgJQ" name="XApplicationImpl">
+  <packagedElement xmi:type="uml:Class" xmi:id="_6j73cDZmEemwVeeG6mXgJQ" name="XApplicationImpl" visibility="private">
     <ownedComment xmi:type="uml:Comment" xmi:id="_LmojcDZnEemwVeeG6mXgJQ" annotatedElement="_6j73cDZmEemwVeeG6mXgJQ">
       <body>These class holds the private part of the XApplication class and implements the PIMPL idiom</body>
     </ownedComment>
@@ -229,8 +251,12 @@ using XVector = std::vector&lt;T>;</body>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ss1Y0DZhEemwVeeG6mXgJQ" name="argc" type="_VV2CcDZhEemwVeeG6mXgJQ"/>
       <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-85sDZiEemwVeeG6mXgJQ" name="argv" type="_TMTtoDZiEemwVeeG6mXgJQ"/>
     </ownedOperation>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_nb_dkDZjEemwVeeG6mXgJQ" name="parseParameters" visibility="private">
-      <ownedParameter xmi:type="uml:Parameter" xmi:id="_11mAYDZjEemwVeeG6mXgJQ" direction="return"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nb_dkDZjEemwVeeG6mXgJQ" name="configureApplication" visibility="private">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_anIpgDesEemxjIaGlGpK2Q" annotatedElement="_nb_dkDZjEemwVeeG6mXgJQ">
+        <body>Configures the application with parameters, provided by the user</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_11mAYDZjEemwVeeG6mXgJQ" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ffNLsDesEemxjIaGlGpK2Q" name="aConfiguration" type="_rVeIsDekEemxjIaGlGpK2Q"/>
     </ownedOperation>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_QFjl0DZnEemwVeeG6mXgJQ" memberEnd="_QFoeUDZnEemwVeeG6mXgJQ _QFrhoTZnEemwVeeG6mXgJQ">
@@ -238,5 +264,171 @@ using XVector = std::vector&lt;T>;</body>
       <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QFnQMTZnEemwVeeG6mXgJQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_QFrhoTZnEemwVeeG6mXgJQ" name="xapplication" type="_NfdxgDZgEemwVeeG6mXgJQ" association="_QFjl0DZnEemwVeeG6mXgJQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_rVeIsDekEemxjIaGlGpK2Q" name="IXConfiguration" isAbstract="true">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_8707YDekEemxjIaGlGpK2Q" annotatedElement="_rVeIsDekEemxjIaGlGpK2Q">
+      <body>Provides methods to read and store user configuration</body>
+    </ownedComment>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__Lw9sDekEemxjIaGlGpK2Q" name="readConfiguration" visibility="public" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_MPNl4DelEemxjIaGlGpK2Q" annotatedElement="__Lw9sDekEemxjIaGlGpK2Q">
+        <body>Reads the user configuration from the provided input</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_QxT4EDelEemxjIaGlGpK2Q" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_78cskDelEemxjIaGlGpK2Q" name="getProperty1" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_kU5XADemEemxjIaGlGpK2Q" annotatedElement="_78cskDelEemxjIaGlGpK2Q">
+        <body>Get a particular config property. TBD</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_pwpOADemEemxjIaGlGpK2Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_reP_UDemEemxjIaGlGpK2Q" name="getProperty2" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_reP_UTemEemxjIaGlGpK2Q" annotatedElement="_reP_UDemEemxjIaGlGpK2Q">
+        <body>Get a particular config property. TBD</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_reP_UjemEemxjIaGlGpK2Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_uBL2IDemEemxjIaGlGpK2Q" name="getProperty3" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_uBL2ITemEemxjIaGlGpK2Q" annotatedElement="_uBL2IDemEemxjIaGlGpK2Q">
+        <body>Get a particular config property. TBD</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_uBL2IjemEemxjIaGlGpK2Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wyuwsDemEemxjIaGlGpK2Q" name="getProperty10" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_wyuwsTemEemxjIaGlGpK2Q" annotatedElement="_wyuwsDemEemxjIaGlGpK2Q">
+        <body>Get a particular config property. TBD</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_wyuwsjemEemxjIaGlGpK2Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_mcuJsDenEemxjIaGlGpK2Q" name="XConfigurationProperties">
+    <ownedComment xmi:type="uml:Comment" xmi:id="__doCYDenEemxjIaGlGpK2Q" annotatedElement="_mcuJsDenEemxjIaGlGpK2Q">
+      <body>Provides the members to store the configuration properties and implements the methods for returning these properties</body>
+    </ownedComment>
+    <generalization xmi:type="uml:Generalization" xmi:id="_GPL1wDeoEemxjIaGlGpK2Q" general="_rVeIsDekEemxjIaGlGpK2Q"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LOPJsDeoEemxjIaGlGpK2Q" name="mProperty1" visibility="private" type="_UiccwDEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_RSKbADeoEemxjIaGlGpK2Q" annotatedElement="_LOPJsDeoEemxjIaGlGpK2Q">
+        <body>A particular config property. TBD</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZOSkEDeoEemxjIaGlGpK2Q" name="mProperty2" visibility="private" type="_UiccwDEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ZOSkETeoEemxjIaGlGpK2Q" annotatedElement="_ZOSkEDeoEemxjIaGlGpK2Q">
+        <body>A particular config property. TBD</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cIcoEDeoEemxjIaGlGpK2Q" name="mProperty3" visibility="private" type="_UiccwDEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_cIcoETeoEemxjIaGlGpK2Q" annotatedElement="_cIcoEDeoEemxjIaGlGpK2Q">
+        <body>A particular config property. TBD</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_e0hz0DeoEemxjIaGlGpK2Q" name="mProperty10" visibility="private" type="_UiccwDEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_e0hz0TeoEemxjIaGlGpK2Q" annotatedElement="_e0hz0DeoEemxjIaGlGpK2Q">
+        <body>A particular config property. TBD</body>
+      </ownedComment>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_29Wf4DemEemxjIaGlGpK2Q" name="XCommandLineConfig">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_5wjVYDeoEemxjIaGlGpK2Q" annotatedElement="_29Wf4DemEemxjIaGlGpK2Q">
+      <body>Provides methods to read the configuration from the command line arguments</body>
+    </ownedComment>
+    <generalization xmi:type="uml:Generalization" xmi:id="_obTg0DeoEemxjIaGlGpK2Q" general="_mcuJsDenEemxjIaGlGpK2Q"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_53enUDepEemxjIaGlGpK2Q" name="mXCommandLineConfigImpl" visibility="private" type="_n6hSgDepEemxjIaGlGpK2Q" association="_53cyIDepEemxjIaGlGpK2Q">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_UUppsDeqEemxjIaGlGpK2Q" annotatedElement="_53enUDepEemxjIaGlGpK2Q">
+        <body>Unique_ptr to the private implementation of the class. PIMPL idiom.</body>
+      </ownedComment>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_53fOYDepEemxjIaGlGpK2Q"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_53fOYTepEemxjIaGlGpK2Q" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_INNzQDepEemxjIaGlGpK2Q" name="XCommandLineConfig">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_XnoS0DepEemxjIaGlGpK2Q" annotatedElement="_INNzQDepEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_PFBYkDepEemxjIaGlGpK2Q" name="aArgumentsCount" type="_kXXHADEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_U_GKUDepEemxjIaGlGpK2Q" name="aArguments" type="_TMTtoDZiEemwVeeG6mXgJQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zhoDEDeqEemxjIaGlGpK2Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zh2FgDeqEemxjIaGlGpK2Q" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_n6hSgDepEemxjIaGlGpK2Q" name="XCommandLineConfigImpl">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_n6hSgTepEemxjIaGlGpK2Q" annotatedElement="_n6hSgDepEemxjIaGlGpK2Q">
+      <body>The private implementation of the XCommandLineConfigFile. PIMPL idiom</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_c1r2oDeqEemxjIaGlGpK2Q" name="mArgumentsCount" visibility="private" type="_kXXHADEVEemPSJ3g7P3waw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_HFNiADesEemxjIaGlGpK2Q" annotatedElement="_c1r2oDeqEemxjIaGlGpK2Q">
+        <body>The number of command line arguments</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_lhIj0DeqEemxjIaGlGpK2Q" name="mArguments" visibility="private" type="_TMTtoDZiEemwVeeG6mXgJQ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_FKGgMDesEemxjIaGlGpK2Q" annotatedElement="_lhIj0DeqEemxjIaGlGpK2Q">
+        <body>The command line arguments</body>
+      </ownedComment>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sf0NMDeqEemxjIaGlGpK2Q"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sf664DeqEemxjIaGlGpK2Q" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_n6hSgzepEemxjIaGlGpK2Q" name="XCommandLineConfigImpl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_n6hShDepEemxjIaGlGpK2Q" annotatedElement="_n6hSgzepEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_n6hShTepEemxjIaGlGpK2Q" name="aArgumentsCount" type="_kXXHADEVEemPSJ3g7P3waw"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_n6hShjepEemxjIaGlGpK2Q" name="aArguments" type="_TMTtoDZiEemwVeeG6mXgJQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wpO5oDeqEemxjIaGlGpK2Q"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wZaU8DeqEemxjIaGlGpK2Q" value="*"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_53cyIDepEemxjIaGlGpK2Q" memberEnd="_53enUDepEemxjIaGlGpK2Q _53fOYjepEemxjIaGlGpK2Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_53eAQDepEemxjIaGlGpK2Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_53eAQTepEemxjIaGlGpK2Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_53fOYjepEemxjIaGlGpK2Q" name="xcommandlineconfig" type="_29Wf4DemEemxjIaGlGpK2Q" association="_53cyIDepEemxjIaGlGpK2Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UShqIDenEemxjIaGlGpK2Q" name="XFileConfig">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_99PYQDeoEemxjIaGlGpK2Q" annotatedElement="_UShqIDenEemxjIaGlGpK2Q">
+      <body>Provides methods to read the configuration from a file</body>
+    </ownedComment>
+    <generalization xmi:type="uml:Generalization" xmi:id="_pwekADeoEemxjIaGlGpK2Q" general="_mcuJsDenEemxjIaGlGpK2Q"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_dmRJkTerEemxjIaGlGpK2Q" name="mXFileConfigImpl" visibility="private" type="_KDsh0DerEemxjIaGlGpK2Q" association="_dmP7cDerEemxjIaGlGpK2Q">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_lx_04DerEemxjIaGlGpK2Q" annotatedElement="_dmRJkTerEemxjIaGlGpK2Q">
+        <body>Unique_ptr to the private implementation of the class. PIMPL idiom.</body>
+      </ownedComment>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dmSXsDerEemxjIaGlGpK2Q"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dmWCEDerEemxjIaGlGpK2Q" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_6JdSsDeqEemxjIaGlGpK2Q" name="XFileConfig">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_PM3loDesEemxjIaGlGpK2Q" annotatedElement="_6JdSsDeqEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_FWHYYDerEemxjIaGlGpK2Q" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_FWHYYTerEemxjIaGlGpK2Q" annotatedElement="_FWHYYDerEemxjIaGlGpK2Q">
+          <body>The path to the file, including the file name</body>
+        </ownedComment>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KDsh0DerEemxjIaGlGpK2Q" name="XFileConfigImpl">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_KDsh0TerEemxjIaGlGpK2Q" annotatedElement="_KDsh0DerEemxjIaGlGpK2Q">
+      <body>Provides methods to read the configuration from a file</body>
+    </ownedComment>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_riX4EDerEemxjIaGlGpK2Q" name="mFilePath" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_Kbs8sDesEemxjIaGlGpK2Q" annotatedElement="_riX4EDerEemxjIaGlGpK2Q">
+        <body>The path and file name of the config file</body>
+      </ownedComment>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KDsh0zerEemxjIaGlGpK2Q" name="XFileConfigImpl">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_B41jwDesEemxjIaGlGpK2Q" annotatedElement="_KDsh0zerEemxjIaGlGpK2Q">
+        <body>Constructor</body>
+      </ownedComment>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_KDsh1DerEemxjIaGlGpK2Q" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_KDsh1TerEemxjIaGlGpK2Q" annotatedElement="_KDsh1DerEemxjIaGlGpK2Q">
+          <body>The path to the file, including the file name</body>
+        </ownedComment>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dmP7cDerEemxjIaGlGpK2Q" memberEnd="_dmRJkTerEemxjIaGlGpK2Q _dmYeUDerEemxjIaGlGpK2Q">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dmQigDerEemxjIaGlGpK2Q" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dmRJkDerEemxjIaGlGpK2Q" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_dmYeUDerEemxjIaGlGpK2Q" name="xfileconfig" type="_UShqIDenEemxjIaGlGpK2Q" association="_dmP7cDerEemxjIaGlGpK2Q"/>
   </packagedElement>
 </uml:Model>
