@@ -533,4 +533,5 @@ using XVector = std::vector&lt;T>;</body>
   <C_Cpp:NoCodeGen xmi:id="_LjGooEjOEemf6J8ey5ybBQ" base_element="_hZK7kDg8EemJ9Iqu6RJn7w"/>
   <standard:Destroy xmi:id="_e3RoAEjOEemf6J8ey5ybBQ" base_BehavioralFeature="_e3K6UEjOEemf6J8ey5ybBQ"/>
   <standard:Destroy xmi:id="_fylZsEjOEemf6J8ey5ybBQ" base_BehavioralFeature="_fyhIQEjOEemf6J8ey5ybBQ"/>
+  <C_Cpp:Ptr xmi:id="_vTSSAEjPEemf6J8ey5ybBQ" base_property="_QFoeUDZnEemwVeeG6mXgJQ"/>
 </xmi:XMI>
