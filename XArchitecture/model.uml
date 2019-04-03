@@ -285,6 +285,79 @@ using XVector = std::vector&lt;T>;</body>
               </ownedComment>
             </ownedParameter>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_xwtW0FXtEemQOYxlVnSqqA" name="XApplication"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_qkdEIFXwEemQOYxlVnSqqA" name="setUp">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_DyDVAFXxEemQOYxlVnSqqA" annotatedElement="_qkdEIFXwEemQOYxlVnSqqA">
+              <body>Creates all components required for the rendering like windows and contexts</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_yYF_kFXwEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Qy1iYFX_EemQOYxlVnSqqA" name="onSetupStart" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_osb0wFX_EemQOYxlVnSqqA" annotatedElement="_Qy1iYFX_EemQOYxlVnSqqA">
+              <body>Called when the setup procedure is started</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_4YYwQFX_EemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_IOE2kFYAEemQOYxlVnSqqA" name="onSetupEnd" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_IOE2kVYAEemQOYxlVnSqqA" annotatedElement="_IOE2kFYAEemQOYxlVnSqqA">
+              <body>Called when the setup procedure is over</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_IOE2klYAEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Evz9wFXxEemQOYxlVnSqqA" name="tearDown">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_M6C0QFXxEemQOYxlVnSqqA" annotatedElement="_Evz9wFXxEemQOYxlVnSqqA">
+              <body>Destroys and deinitializes all components used in the rendering like windows and contexts. Stops and timers and frees any used resources.</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_PF8EEFXxEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pESzwFYCEemQOYxlVnSqqA" name="onTearDownStart" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_pESzwVYCEemQOYxlVnSqqA" annotatedElement="_pESzwFYCEemQOYxlVnSqqA">
+              <body>Called when the teardown procedure is started</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pESzwlYCEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_uY8kQFYCEemQOYxlVnSqqA" name="onTearDownEnd" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_uY8kQVYCEemQOYxlVnSqqA" annotatedElement="_uY8kQFYCEemQOYxlVnSqqA">
+              <body>Called when the teardown procedure is over</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uY8kQlYCEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_YhMUMFYKEemQOYxlVnSqqA" name="initRenderedContent">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_qQBGYFYKEemQOYxlVnSqqA" annotatedElement="_YhMUMFYKEemQOYxlVnSqqA">
+              <body>Loads and initializes the graphical content, that should be rendered by the application</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_smmjQFYKEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_0zHRsFYKEemQOYxlVnSqqA" name="onInitRenderedContentStart" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_BhmWgFYLEemQOYxlVnSqqA" annotatedElement="_0zHRsFYKEemQOYxlVnSqqA">
+              <body>Called when the initRenderedContent is called</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_70PyIFYKEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_EOh20FYLEemQOYxlVnSqqA" name="onInitRenderedContentEnd" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_EOh20VYLEemQOYxlVnSqqA" annotatedElement="_EOh20FYLEemQOYxlVnSqqA">
+              <body>Called when the initRenderedContent is finished</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_EOh20lYLEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_WYnBoFYLEemQOYxlVnSqqA" name="renderContent">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_k7_LgFYLEemQOYxlVnSqqA" annotatedElement="_WYnBoFYLEemQOYxlVnSqqA">
+              <body>Renders the whole graphical content and switches the buffers. To be called for each frame, that has to be rendered</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_aI8fsFYLEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_m4X_sFYLEemQOYxlVnSqqA" name="onRenderContentStart" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_2OLsEFYLEemQOYxlVnSqqA" annotatedElement="_m4X_sFYLEemQOYxlVnSqqA">
+              <body>Called before the rendering of the graphical content is started</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_sf5o4FYLEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_35VmUFYLEemQOYxlVnSqqA" name="onRenderContentEnd" visibility="protected">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_7mTAQFYLEemQOYxlVnSqqA" annotatedElement="_35VmUFYLEemQOYxlVnSqqA">
+              <body>Called before the rendering of the graphical content is started</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="__bYbcFYLEemQOYxlVnSqqA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_6j73cDZmEemwVeeG6mXgJQ" name="XApplicationImpl" visibility="private">
             <ownedComment xmi:type="uml:Comment" xmi:id="_LmojcDZnEemwVeeG6mXgJQ" annotatedElement="_6j73cDZmEemwVeeG6mXgJQ">
               <body>These class holds the private part of the XApplication class and implements the PIMPL idiom</body>
@@ -292,6 +365,27 @@ using XVector = std::vector&lt;T>;</body>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Baz7cFBMEemaRqHSvy2Jvg" name="mConfiguration" visibility="private" type="_PtpVoFBREemaRqHSvy2Jvg"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_DDRC0FBTEemaRqHSvy2Jvg" name="mWindowingSystem" visibility="private" type="_IBS_4FBPEemaRqHSvy2Jvg"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_Z9fi4FBTEemaRqHSvy2Jvg" name="mExtensionsLoader" visibility="private" type="_hKhjkFBOEemaRqHSvy2Jvg"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_YlxYYFXtEemQOYxlVnSqqA" name="XApplicationImpl" visibility="public">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_YlxYYVXtEemQOYxlVnSqqA" annotatedElement="_YlxYYFXtEemQOYxlVnSqqA">
+                <body>Construct an application object</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_YlxYYlXtEemQOYxlVnSqqA" name="aConfiguration" type="_PtpVoFBREemaRqHSvy2Jvg">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_YlxYY1XtEemQOYxlVnSqqA" annotatedElement="_YlxYYlXtEemQOYxlVnSqqA">
+                  <body>The reader to read the application configuration</body>
+                </ownedComment>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_YlxYZFXtEemQOYxlVnSqqA" name="aWindowingSystem" type="_IBS_4FBPEemaRqHSvy2Jvg">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_YlxYZVXtEemQOYxlVnSqqA" annotatedElement="_YlxYZFXtEemQOYxlVnSqqA">
+                  <body>The windowing system library to be used</body>
+                </ownedComment>
+              </ownedParameter>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_YlxYZlXtEemQOYxlVnSqqA" name="aExtensionLoader" type="_hKhjkFBOEemaRqHSvy2Jvg">
+                <ownedComment xmi:type="uml:Comment" xmi:id="_YlxYZ1XtEemQOYxlVnSqqA" annotatedElement="_YlxYZlXtEemQOYxlVnSqqA">
+                  <body>The extension loading library</body>
+                </ownedComment>
+              </ownedParameter>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_KjN8QFXwEemQOYxlVnSqqA" name="XApplicationImpl"/>
           </nestedClassifier>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_rR1nQFBNEemaRqHSvy2Jvg" name="XApplicationUniquePtr">
             <ownedComment xmi:type="uml:Comment" xmi:id="_7osg8FBNEemaRqHSvy2Jvg" annotatedElement="_rR1nQFBNEemaRqHSvy2Jvg">
@@ -591,4 +685,16 @@ using XVector = std::vector&lt;T>;</body>
   <C_Cpp:Typedef xmi:id="_SA_4UFBREemaRqHSvy2Jvg" definition="XUniquePtr&lt;IXConfigurationReader>" base_primitivetype="_PtpVoFBREemaRqHSvy2Jvg"/>
   <C_Cpp:Typedef xmi:id="_d9L9gFBREemaRqHSvy2Jvg" definition="XUniquePtr&lt;XCommandLineConfigurationReader>" base_primitivetype="_ZZ9p8FBREemaRqHSvy2Jvg"/>
   <C_Cpp:Typedef xmi:id="_kUQNQFBREemaRqHSvy2Jvg" definition="XUniquePtr&lt;XFileConfigurationReader>" base_primitivetype="_grldcFBREemaRqHSvy2Jvg"/>
+  <standard:Create xmi:id="_Yl6iUFXtEemQOYxlVnSqqA" base_BehavioralFeature="_YlxYYFXtEemQOYxlVnSqqA"/>
+  <C_Cpp:Ref xmi:id="_YmIkwFXtEemQOYxlVnSqqA" base_parameter="_YlxYYlXtEemQOYxlVnSqqA"/>
+  <standard:Destroy xmi:id="_28F2kFXtEemQOYxlVnSqqA" base_BehavioralFeature="_xwtW0FXtEemQOYxlVnSqqA"/>
+  <standard:Destroy xmi:id="_Nxnx8FXwEemQOYxlVnSqqA" base_BehavioralFeature="_KjN8QFXwEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_zDJJ4FX_EemQOYxlVnSqqA" base_operation="_Qy1iYFX_EemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_IOE2k1YAEemQOYxlVnSqqA" base_operation="_IOE2kFYAEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_pESzw1YCEemQOYxlVnSqqA" base_operation="_pESzwFYCEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_uY8kQ1YCEemQOYxlVnSqqA" base_operation="_uY8kQFYCEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_C1QWwFYLEemQOYxlVnSqqA" base_operation="_0zHRsFYKEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_EOk6IFYLEemQOYxlVnSqqA" base_operation="_EOh20FYLEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_qdtHoFYLEemQOYxlVnSqqA" base_operation="_m4X_sFYLEemQOYxlVnSqqA"/>
+  <C_Cpp:Virtual xmi:id="_9A-OgFYLEemQOYxlVnSqqA" base_operation="_35VmUFYLEemQOYxlVnSqqA"/>
 </xmi:XMI>
