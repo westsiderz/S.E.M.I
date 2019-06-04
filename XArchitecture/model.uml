@@ -230,12 +230,6 @@
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_UiccwDEVEemPSJ3g7P3waw" name="XVoid"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a1Th8DEVEemPSJ3g7P3waw" name="XFloat"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kXXHADEVEemPSJ3g7P3waw" name="XInt"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CU7o0DOZEemHGoXhG_mZKw" name="XUniquePtr">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_CU7o0TOZEemHGoXhG_mZKw" annotatedElement="_CU7o0DOZEemHGoXhG_mZKw">
-            <body>template&lt; typename T >&#xD;
-using XUniquePtr = std::unique_ptr&lt;T>;</body>
-          </ownedComment>
-        </packagedElement>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MztfYDOaEemHGoXhG_mZKw" name="XVector">
           <ownedComment xmi:type="uml:Comment" xmi:id="_MztfYTOaEemHGoXhG_mZKw" annotatedElement="_MztfYDOaEemHGoXhG_mZKw">
             <body>template&lt; typename T >&#xD;
@@ -254,6 +248,12 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
         </packagedElement>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_-FtjgFnxEemQdatIlMvaCg" name="XUInt"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_dZKYUFnyEemQdatIlMvaCg" name="XShaderType"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CU7o0DOZEemHGoXhG_mZKw" name="XUniquePtr">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_CU7o0TOZEemHGoXhG_mZKw" annotatedElement="_CU7o0DOZEemHGoXhG_mZKw">
+            <body>template&lt; typename T >&#xD;
+using XUniquePtr = std::unique_ptr&lt;T>;</body>
+          </ownedComment>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_6QMDIDREEem9jI_jcJnhpA" name="XThirdPartyTypes">
         <ownedComment xmi:type="uml:Comment" xmi:id="_BX8I8DRFEem9jI_jcJnhpA" annotatedElement="_6QMDIDREEem9jI_jcJnhpA">
@@ -925,6 +925,38 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
       </eAnnotations>
       <ownedEnd xmi:type="uml:Property" xmi:id="_PkbeUVoMEemQbZgVyJcaYQ" name="xbinaryshader" type="_1WxtYFoFEem8ho2EKpkedA" association="_PkVXsFoMEemQbZgVyJcaYQ"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_jq8n8Ia_Eem-Bqe-8iJe-g" name="IXMaterial">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_1lgwEIa_Eem-Bqe-8iJe-g" annotatedElement="_jq8n8Ia_Eem-Bqe-8iJe-g">
+        <body>Provides interface to attach shaders to a given program, link them and use them for rendering a component</body>
+      </ownedComment>
+      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_DdnHUIbLEem-Bqe-8iJe-g" name="IXMaterialSharedPtr"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_73uVAIa_Eem-Bqe-8iJe-g" name="attachShader" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_s0lbEIbBEem-Bqe-8iJe-g" annotatedElement="_73uVAIa_Eem-Bqe-8iJe-g">
+          <body>Attaches a shader to be linked with the current program</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FZOgcIbAEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KatdUIbAEem-Bqe-8iJe-g" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MXKtgIbBEem-Bqe-8iJe-g" name="linkProgram" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_5SPxcIbIEem-Bqe-8iJe-g" annotatedElement="_MXKtgIbBEem-Bqe-8iJe-g">
+          <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-rnC0IbIEem-Bqe-8iJe-g" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_NUnTkIbJEem-Bqe-8iJe-g" name="getLinkErrors" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_TEY50IbJEem-Bqe-8iJe-g" annotatedElement="_NUnTkIbJEem-Bqe-8iJe-g">
+          <body>Queries any errors, which might have happened during shaders linking</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjyUcIbJEem-Bqe-8iJe-g" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vwKsUIbKEem-Bqe-8iJe-g" name="useMaterial" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_573EQIbKEem-Bqe-8iJe-g" annotatedElement="_vwKsUIbKEem-Bqe-8iJe-g">
+          <body>Activates the material to be used for the upcoming rendering</body>
+        </ownedComment>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8CCGkIbKEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SQ5VcIbLEem-Bqe-8iJe-g" name="IXMaterial"/>
+    </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z53xQDhkEemJ9Iqu6RJn7w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z55mcDhkEemJ9Iqu6RJn7w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/C_Cpp/1#/"/>
@@ -1036,7 +1068,7 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
   <C_Cpp:Virtual xmi:id="_9EFKkFn1EemQdatIlMvaCg" base_operation="_UlGDcENxEemcgeKJ44AMTA"/>
   <C_Cpp:Virtual xmi:id="_At2GkFn2EemQdatIlMvaCg" base_operation="_xUGuQDg8EemJ9Iqu6RJn7w"/>
   <C_Cpp:Virtual xmi:id="_CKlKUFn2EemQdatIlMvaCg" base_operation="_2TD7kDg8EemJ9Iqu6RJn7w"/>
-  <C_Cpp:Ptr xmi:id="_HbQc8Fn6Eem8ho2EKpkedA" base_property="_s4-REFn5Eem8ho2EKpkedA"/>
+  <C_Cpp:Ptr xmi:id="_HbQc8Fn6Eem8ho2EKpkedA" base_property="_s4-REFn5Eem8ho2EKpkedA" declaration=""/>
   <standard:Create xmi:id="_55mj4Fn7Eem8ho2EKpkedA" base_BehavioralFeature="_55kHoFn7Eem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="_55nyAFn7Eem8ho2EKpkedA" base_parameter="_55kHoVn7Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_oG0pUFn8Eem8ho2EKpkedA" base_operation="_gEOE0Fn8Eem8ho2EKpkedA"/>
@@ -1071,4 +1103,9 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
   <C_Cpp:Const xmi:id="_1W30AFoFEem8ho2EKpkedA" base_operation="_1WxtjFoFEem8ho2EKpkedA"/>
   <C_Cpp:Ptr xmi:id="_WAAaoFoMEemQbZgVyJcaYQ" base_property="_PkaQMFoMEemQbZgVyJcaYQ"/>
   <C_Cpp:Ptr xmi:id="_XA0-cFoMEemQbZgVyJcaYQ" base_property="_efsFEFn-Eem8ho2EKpkedA"/>
+  <C_Cpp:Const xmi:id="_aGWgsIbJEem-Bqe-8iJe-g" base_operation="_NUnTkIbJEem-Bqe-8iJe-g"/>
+  <C_Cpp:Const xmi:id="_9DF68IbKEem-Bqe-8iJe-g" base_operation="_vwKsUIbKEem-Bqe-8iJe-g"/>
+  <C_Cpp:Typedef xmi:id="_J2bqkIbLEem-Bqe-8iJe-g" definition="XSharedPtr&lt;IXMaterial>" base_primitivetype="_DdnHUIbLEem-Bqe-8iJe-g"/>
+  <standard:Destroy xmi:id="_W1gwIIbLEem-Bqe-8iJe-g" base_BehavioralFeature="_SQ5VcIbLEem-Bqe-8iJe-g"/>
+  <C_Cpp:Virtual xmi:id="_W2VPgIbLEem-Bqe-8iJe-g" base_operation="_SQ5VcIbLEem-Bqe-8iJe-g"/>
 </xmi:XMI>
