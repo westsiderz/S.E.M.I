@@ -228,31 +228,91 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_PbDFIDEVEemPSJ3g7P3waw" name="XCommonTypedefs">
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_UiccwDEVEemPSJ3g7P3waw" name="XVoid"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w0v1UDZmEemwVeeG6mXgJQ" name="XBool"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a1Th8DEVEemPSJ3g7P3waw" name="XFloat"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_kXXHADEVEemPSJ3g7P3waw" name="XInt"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_-FtjgFnxEemQdatIlMvaCg" name="XUInt"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_VV2CcDZhEemwVeeG6mXgJQ" name="XChar"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TMTtoDZiEemwVeeG6mXgJQ" name="XCharPtr"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_aQAXII3IEemW9p4WMdxRmw" name="XCharString"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_SVCZ8DOaEemHGoXhG_mZKw" name="XString"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_MztfYDOaEemHGoXhG_mZKw" name="XVector">
           <ownedComment xmi:type="uml:Comment" xmi:id="_MztfYTOaEemHGoXhG_mZKw" annotatedElement="_MztfYDOaEemHGoXhG_mZKw">
             <body>template&lt; typename T >&#xD;
 using XVector = std::vector&lt;T>;</body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_SVCZ8DOaEemHGoXhG_mZKw" name="XString"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_VV2CcDZhEemwVeeG6mXgJQ" name="XChar"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_TMTtoDZiEemwVeeG6mXgJQ" name="XCharPtr"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w0v1UDZmEemwVeeG6mXgJQ" name="XBool"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CU7o0DOZEemHGoXhG_mZKw" name="XUniquePtr">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_CU7o0TOZEemHGoXhG_mZKw" annotatedElement="_CU7o0DOZEemHGoXhG_mZKw">
+            <body>template&lt; typename T >&#xD;
+using XUniquePtr = std::unique_ptr&lt;T>;</body>
+          </ownedComment>
+        </packagedElement>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_sBKOYFnwEemQdatIlMvaCg" name="XSharedPtr">
           <ownedComment xmi:type="uml:Comment" xmi:id="_sBKOYVnwEemQdatIlMvaCg" annotatedElement="_sBKOYFnwEemQdatIlMvaCg">
             <body>template&lt; typename T >&#xD;
 using XSharedPtr = std::shared_ptr&lt;T>;</body>
           </ownedComment>
         </packagedElement>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_-FtjgFnxEemQdatIlMvaCg" name="XUInt"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_dZKYUFnyEemQdatIlMvaCg" name="XShaderType"/>
-        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_CU7o0DOZEemHGoXhG_mZKw" name="XUniquePtr">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_CU7o0TOZEemHGoXhG_mZKw" annotatedElement="_CU7o0DOZEemHGoXhG_mZKw">
-            <body>template&lt; typename T >&#xD;
-using XUniquePtr = std::unique_ptr&lt;T>;</body>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_MlvdAI28EemW9p4WMdxRmw" name="XMaterialCreationStatus">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_glw1wI28EemW9p4WMdxRmw" annotatedElement="_MlvdAI28EemW9p4WMdxRmw">
+            <body>The status of the material creation. It might be successful or it might fail to to some reason</body>
           </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_kM9l8I28EemW9p4WMdxRmw" name="Success">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_WTBnkI3xEemW9p4WMdxRmw" annotatedElement="_kM9l8I28EemW9p4WMdxRmw">
+              <body>Shaders are compiled and linked successfully</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_okdKoI28EemW9p4WMdxRmw" name="NoShadersAttached">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_eH7HQI3xEemW9p4WMdxRmw" annotatedElement="_okdKoI28EemW9p4WMdxRmw">
+              <body>The required shaders are not attached</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_q1qYQI28EemW9p4WMdxRmw" name="ShadersCompilationFail">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_iLiGoI3xEemW9p4WMdxRmw" annotatedElement="_q1qYQI28EemW9p4WMdxRmw">
+              <body>The compilation of the shaders has failed</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tNaSwI28EemW9p4WMdxRmw" name="ShadersLinkingFail">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ll57wI3xEemW9p4WMdxRmw" annotatedElement="_tNaSwI28EemW9p4WMdxRmw">
+              <body>The linking of the shaders has failed</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_XDzZgI3LEemW9p4WMdxRmw" name="XShaderType">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XDzZgY3LEemW9p4WMdxRmw" annotatedElement="_XDzZgI3LEemW9p4WMdxRmw">
+            <body>The status of the material creation. It might be successful or it might fail to to some reason</body>
+          </ownedComment>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XDzZgo3LEemW9p4WMdxRmw" name="VertexShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_g1dg0I3LEemW9p4WMdxRmw" annotatedElement="_XDzZgo3LEemW9p4WMdxRmw">
+              <body>Vertex Shader</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XDzZg43LEemW9p4WMdxRmw" name="TessallationControlShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_rSp4cI3LEemW9p4WMdxRmw" annotatedElement="_XDzZg43LEemW9p4WMdxRmw">
+              <body>Tessallation Control Shader</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XDzZhI3LEemW9p4WMdxRmw" name="TessallationEvaluationShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_xllPEI3LEemW9p4WMdxRmw" annotatedElement="_XDzZhI3LEemW9p4WMdxRmw">
+              <body>Tessallation Evaluation Shader</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_XDzZhY3LEemW9p4WMdxRmw" name="GeometryShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_3uOBQI3LEemW9p4WMdxRmw" annotatedElement="_XDzZhY3LEemW9p4WMdxRmw">
+              <body>Geometry Shader</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_667N0I3LEemW9p4WMdxRmw" name="FragmentShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_667N0Y3LEemW9p4WMdxRmw" annotatedElement="_667N0I3LEemW9p4WMdxRmw">
+              <body>Fragment Shader</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_--29UI3LEemW9p4WMdxRmw" name="ComputeShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_--29UY3LEemW9p4WMdxRmw" annotatedElement="_--29UI3LEemW9p4WMdxRmw">
+              <body>Compute Shader</body>
+            </ownedComment>
+          </ownedLiteral>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_6QMDIDREEem9jI_jcJnhpA" name="XThirdPartyTypes">
@@ -625,29 +685,11 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
             </ownedComment>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_aaP3gFnvEemQdatIlMvaCg" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_epW8QFnvEemQdatIlMvaCg" name="compileShader" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_4Vcf8FnvEemQdatIlMvaCg" annotatedElement="_epW8QFnvEemQdatIlMvaCg">
-              <body>Compiles the source code of the shader. Returns true if no compilation errors and false elsewhen</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_mo8B8FnvEemQdatIlMvaCg" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_6ENH0FnvEemQdatIlMvaCg" name="getCompilationError" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Ikb3EFnwEemQdatIlMvaCg" annotatedElement="_6ENH0FnvEemQdatIlMvaCg">
-              <body>Returns any compilation error</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_ALFmgFnwEemQdatIlMvaCg" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Y79iUFn0EemQdatIlMvaCg" name="getShaderId" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_f2kkAFn0EemQdatIlMvaCg" annotatedElement="_Y79iUFn0EemQdatIlMvaCg">
-              <body>Gets the Id of the shader, which is used to access the given shader</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Y79iUVn0EemQdatIlMvaCg" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_TZN9YFnyEemQdatIlMvaCg" name="getShaderType" isAbstract="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_jE2d4Fn0EemQdatIlMvaCg" annotatedElement="_TZN9YFnyEemQdatIlMvaCg">
               <body>Gets the type of the shader</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uZYioFnzEemQdatIlMvaCg" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_uZYioFnzEemQdatIlMvaCg" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_lneWMFn1EemQdatIlMvaCg" name="IXShader"/>
         </packagedElement>
@@ -662,72 +704,40 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_Z-RbQFnxEemQdatIlMvaCg" client="_AbCRkFnxEemQdatIlMvaCg" supplier="_randsFnuEemQdatIlMvaCg" contract="_randsFnuEemQdatIlMvaCg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_9hNn8Fn0EemQdatIlMvaCg" name="XStringShader">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_Fce1YFn1EemQdatIlMvaCg" name="aSource" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_j9ij8Fn1EemQdatIlMvaCg" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_j9ij8Fn1EemQdatIlMvaCg" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_V_SgYFn1EemQdatIlMvaCg" name="XStringShader"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_f-lX4FnxEemQdatIlMvaCg" name="compileShader">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_f-lX4VnxEemQdatIlMvaCg" annotatedElement="_f-lX4FnxEemQdatIlMvaCg">
-              <body>Compiles the source code of the shader. Returns true if no compilation errors and false elsewhen</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-lX4lnxEemQdatIlMvaCg" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_f-kw0FnxEemQdatIlMvaCg" name="loadSource">
             <ownedComment xmi:type="uml:Comment" xmi:id="_f-kw0VnxEemQdatIlMvaCg" annotatedElement="_f-kw0FnxEemQdatIlMvaCg">
               <body>Loads the source code of the shader</body>
             </ownedComment>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-kw0lnxEemQdatIlMvaCg" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_f-l-8FnxEemQdatIlMvaCg" name="getCompilationError">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_f-l-8VnxEemQdatIlMvaCg" annotatedElement="_f-l-8FnxEemQdatIlMvaCg">
-              <body>Returns any compilation error</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_f-l-8lnxEemQdatIlMvaCg" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_nO9t4Fn0EemQdatIlMvaCg" name="getShaderId">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_nO9t4Vn0EemQdatIlMvaCg" annotatedElement="_nO9t4Fn0EemQdatIlMvaCg">
-              <body>Gets the Id of the shader, which is used to access the given shader</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_nO9t4ln0EemQdatIlMvaCg" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_w3cggFnzEemQdatIlMvaCg" name="getShaderType">
             <ownedComment xmi:type="uml:Comment" xmi:id="_k9sO0Fn0EemQdatIlMvaCg" annotatedElement="_w3cggFnzEemQdatIlMvaCg">
               <body>Gets the type of the shader</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_w3cggVnzEemQdatIlMvaCg" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_w3cggVnzEemQdatIlMvaCg" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_mjt40FnxEemQdatIlMvaCg" name="XStringShaderSharedPtr"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_iH_ssFn3Eem8ho2EKpkedA" name="XStringShaderImpl" visibility="private">
             <ownedComment xmi:type="uml:Comment" xmi:id="_x4lJMFn6Eem8ho2EKpkedA" annotatedElement="_iH_ssFn3Eem8ho2EKpkedA">
               <body>Private implementation of XStringShader (PIMPL idiom)</body>
             </ownedComment>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_b8xZMFn6Eem8ho2EKpkedA" name="mShaderId" visibility="private" type="_-FtjgFnxEemQdatIlMvaCg"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_lM9yMFn6Eem8ho2EKpkedA" name="mShaderType" visibility="private" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_lM9yMFn6Eem8ho2EKpkedA" name="mShaderType" visibility="private" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_zef-IFn6Eem8ho2EKpkedA" name="mShaderSource" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_wcBPIFn7Eem8ho2EKpkedA" name="mCompilationError" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_55kHoFn7Eem8ho2EKpkedA" name="XStringShaderImpl">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_55kHoVn7Eem8ho2EKpkedA" name="aSource" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_55kHoln7Eem8ho2EKpkedA" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_55kHoln7Eem8ho2EKpkedA" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_gEOE0Fn8Eem8ho2EKpkedA" name="getShaderSource">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_lm5DMFn8Eem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_rBXu4Fn8Eem8ho2EKpkedA" name="getCompilationError">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_rBXu4Vn8Eem8ho2EKpkedA" annotatedElement="_rBXu4Fn8Eem8ho2EKpkedA">
-                <body>Returns any compilation error</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_rBXu4ln8Eem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_rBZkEFn8Eem8ho2EKpkedA" name="getShaderId">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_rBZkEVn8Eem8ho2EKpkedA" annotatedElement="_rBZkEFn8Eem8ho2EKpkedA">
-                <body>Gets the Id of the shader, which is used to access the given shader</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_rBZkEln8Eem8ho2EKpkedA" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_rBcAUFn8Eem8ho2EKpkedA" name="getShaderType">
               <ownedComment xmi:type="uml:Comment" xmi:id="_rBcAUVn8Eem8ho2EKpkedA" annotatedElement="_rBcAUFn8Eem8ho2EKpkedA">
                 <body>Gets the type of the shader</body>
               </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_rBcAUln8Eem8ho2EKpkedA" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_rBcAUln8Eem8ho2EKpkedA" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
             </ownedOperation>
           </nestedClassifier>
         </packagedElement>
@@ -748,73 +758,41 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_W0-4oFn9Eem8ho2EKpkedA" client="__u_NcFn8Eem8ho2EKpkedA" supplier="_randsFnuEemQdatIlMvaCg" contract="_randsFnuEemQdatIlMvaCg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Ndln8Eem8ho2EKpkedA" name="XTextFileShader">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nd1n8Eem8ho2EKpkedA" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NeFn8Eem8ho2EKpkedA" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NeFn8Eem8ho2EKpkedA" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NeVn8Eem8ho2EKpkedA" name="XTextFileShader"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Neln8Eem8ho2EKpkedA" name="compileShader">
-            <ownedComment xmi:type="uml:Comment" xmi:id="__u_Ne1n8Eem8ho2EKpkedA" annotatedElement="__u_Neln8Eem8ho2EKpkedA">
-              <body>Compiles the source code of the shader. Returns true if no compilation errors and false elsewhen</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NfFn8Eem8ho2EKpkedA" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NfVn8Eem8ho2EKpkedA" name="loadSource">
             <ownedComment xmi:type="uml:Comment" xmi:id="__u_Nfln8Eem8ho2EKpkedA" annotatedElement="__u_NfVn8Eem8ho2EKpkedA">
               <body>Loads the source code of the shader</body>
             </ownedComment>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nf1n8Eem8ho2EKpkedA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NgFn8Eem8ho2EKpkedA" name="getCompilationError">
-            <ownedComment xmi:type="uml:Comment" xmi:id="__u_NgVn8Eem8ho2EKpkedA" annotatedElement="__u_NgFn8Eem8ho2EKpkedA">
-              <body>Returns any compilation error</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Ngln8Eem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Ng1n8Eem8ho2EKpkedA" name="getShaderId">
-            <ownedComment xmi:type="uml:Comment" xmi:id="__u_NhFn8Eem8ho2EKpkedA" annotatedElement="__u_Ng1n8Eem8ho2EKpkedA">
-              <body>Gets the Id of the shader, which is used to access the given shader</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NhVn8Eem8ho2EKpkedA" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Nhln8Eem8ho2EKpkedA" name="getShaderType">
             <ownedComment xmi:type="uml:Comment" xmi:id="__u_Nh1n8Eem8ho2EKpkedA" annotatedElement="__u_Nhln8Eem8ho2EKpkedA">
               <body>Gets the type of the shader</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NiFn8Eem8ho2EKpkedA" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NiFn8Eem8ho2EKpkedA" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="__u_NiVn8Eem8ho2EKpkedA" name="XTextFileShaderSharedPtr"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="__u_Niln8Eem8ho2EKpkedA" name="XTextFileShaderImpl" visibility="private">
             <ownedComment xmi:type="uml:Comment" xmi:id="__u_Ni1n8Eem8ho2EKpkedA" annotatedElement="__u_Niln8Eem8ho2EKpkedA">
               <body>Private implementation of XTextFileShader (PIMPL idiom)</body>
             </ownedComment>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="__u_NjFn8Eem8ho2EKpkedA" name="mShaderId" visibility="private" type="_-FtjgFnxEemQdatIlMvaCg"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="__u_NjVn8Eem8ho2EKpkedA" name="mShaderType" visibility="private" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="__u_NjVn8Eem8ho2EKpkedA" name="mShaderType" visibility="private" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="__u_Njln8Eem8ho2EKpkedA" name="mShaderSource" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="__u_Nj1n8Eem8ho2EKpkedA" name="mCompilationError" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_qH2W0FoFEem8ho2EKpkedA" name="mShaderFilePath" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NkFn8Eem8ho2EKpkedA" name="XTextFileShaderImpl">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NkVn8Eem8ho2EKpkedA" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nkln8Eem8ho2EKpkedA" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nkln8Eem8ho2EKpkedA" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Nk1n8Eem8ho2EKpkedA" name="getShaderSource">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NlFn8Eem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NlVn8Eem8ho2EKpkedA" name="getCompilationError">
-              <ownedComment xmi:type="uml:Comment" xmi:id="__u_Nlln8Eem8ho2EKpkedA" annotatedElement="__u_NlVn8Eem8ho2EKpkedA">
-                <body>Returns any compilation error</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nl1n8Eem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="__u_NmFn8Eem8ho2EKpkedA" name="getShaderId">
-              <ownedComment xmi:type="uml:Comment" xmi:id="__u_NmVn8Eem8ho2EKpkedA" annotatedElement="__u_NmFn8Eem8ho2EKpkedA">
-                <body>Gets the Id of the shader, which is used to access the given shader</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_Nmln8Eem8ho2EKpkedA" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="__u_Nm1n8Eem8ho2EKpkedA" name="getShaderType">
               <ownedComment xmi:type="uml:Comment" xmi:id="__u_NnFn8Eem8ho2EKpkedA" annotatedElement="__u_Nm1n8Eem8ho2EKpkedA">
                 <body>Gets the type of the shader</body>
               </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NnVn8Eem8ho2EKpkedA" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="__u_NnVn8Eem8ho2EKpkedA" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_U1qPwFn-Eem8ho2EKpkedA" name="readShaderSourceFromFile" visibility="private">
               <ownedComment xmi:type="uml:Comment" xmi:id="_VUdAYFoFEem8ho2EKpkedA" annotatedElement="_U1qPwFn-Eem8ho2EKpkedA">
@@ -841,73 +819,41 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
           <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_CEgVgFoMEemQbZgVyJcaYQ" client="_1WxtYFoFEem8ho2EKpkedA" supplier="_randsFnuEemQdatIlMvaCg" contract="_randsFnuEemQdatIlMvaCg"/>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtZloFEem8ho2EKpkedA" name="XBinaryShader">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtZ1oFEem8ho2EKpkedA" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtaFoFEem8ho2EKpkedA" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtaFoFEem8ho2EKpkedA" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtaVoFEem8ho2EKpkedA" name="XTextFileShader"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtaloFEem8ho2EKpkedA" name="compileShader">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_1Wxta1oFEem8ho2EKpkedA" annotatedElement="_1WxtaloFEem8ho2EKpkedA">
-              <body>Compiles the source code of the shader. Returns true if no compilation errors and false elsewhen</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtbFoFEem8ho2EKpkedA" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtbVoFEem8ho2EKpkedA" name="loadSource">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtbloFEem8ho2EKpkedA" annotatedElement="_1WxtbVoFEem8ho2EKpkedA">
               <body>Loads the source code of the shader</body>
             </ownedComment>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Wxtb1oFEem8ho2EKpkedA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtcFoFEem8ho2EKpkedA" name="getCompilationError">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtcVoFEem8ho2EKpkedA" annotatedElement="_1WxtcFoFEem8ho2EKpkedA">
-              <body>Returns any compilation error</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtcloFEem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_1Wxtc1oFEem8ho2EKpkedA" name="getShaderId">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtdFoFEem8ho2EKpkedA" annotatedElement="_1Wxtc1oFEem8ho2EKpkedA">
-              <body>Gets the Id of the shader, which is used to access the given shader</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtdVoFEem8ho2EKpkedA" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtdloFEem8ho2EKpkedA" name="getShaderType">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1Wxtd1oFEem8ho2EKpkedA" annotatedElement="_1WxtdloFEem8ho2EKpkedA">
               <body>Gets the type of the shader</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxteFoFEem8ho2EKpkedA" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxteFoFEem8ho2EKpkedA" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_1WxteVoFEem8ho2EKpkedA" name="XBinaryShaderSharedPtr"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_1WxteloFEem8ho2EKpkedA" name="XBinaryShaderImpl" visibility="private">
             <ownedComment xmi:type="uml:Comment" xmi:id="_1Wxte1oFEem8ho2EKpkedA" annotatedElement="_1WxteloFEem8ho2EKpkedA">
               <body>Private implementation of XBinaryShader (PIMPL idiom)</body>
             </ownedComment>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_1WxtfFoFEem8ho2EKpkedA" name="mShaderId" visibility="private" type="_-FtjgFnxEemQdatIlMvaCg"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_1WxtfVoFEem8ho2EKpkedA" name="mShaderType" visibility="private" type="_dZKYUFnyEemQdatIlMvaCg"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_1WxtfVoFEem8ho2EKpkedA" name="mShaderType" visibility="private" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_1WxtfloFEem8ho2EKpkedA" name="mShaderSource" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_1Wxtf1oFEem8ho2EKpkedA" name="mCompilationError" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_1WxtgFoFEem8ho2EKpkedA" name="mShaderFilePath" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtgVoFEem8ho2EKpkedA" name="XBinaryShaderImpl">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtgloFEem8ho2EKpkedA" name="aFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Wxtg1oFEem8ho2EKpkedA" name="aShaderType" type="_dZKYUFnyEemQdatIlMvaCg"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Wxtg1oFEem8ho2EKpkedA" name="aShaderType" type="_XDzZgI3LEemW9p4WMdxRmw"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxthFoFEem8ho2EKpkedA" name="getShaderSource">
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxthVoFEem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxthloFEem8ho2EKpkedA" name="getCompilationError">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_1Wxth1oFEem8ho2EKpkedA" annotatedElement="_1WxthloFEem8ho2EKpkedA">
-                <body>Returns any compilation error</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtiFoFEem8ho2EKpkedA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtiVoFEem8ho2EKpkedA" name="getShaderId">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtiloFEem8ho2EKpkedA" annotatedElement="_1WxtiVoFEem8ho2EKpkedA">
-                <body>Gets the Id of the shader, which is used to access the given shader</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1Wxti1oFEem8ho2EKpkedA" type="_-FtjgFnxEemQdatIlMvaCg" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_1WxtjFoFEem8ho2EKpkedA" name="getShaderType">
               <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtjVoFEem8ho2EKpkedA" annotatedElement="_1WxtjFoFEem8ho2EKpkedA">
                 <body>Gets the type of the shader</body>
               </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtjloFEem8ho2EKpkedA" type="_dZKYUFnyEemQdatIlMvaCg" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_1WxtjloFEem8ho2EKpkedA" type="_XDzZgI3LEemW9p4WMdxRmw" direction="return"/>
             </ownedOperation>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_1Wxtj1oFEem8ho2EKpkedA" name="readShaderSourceFromFile" visibility="private">
               <ownedComment xmi:type="uml:Comment" xmi:id="_1WxtkFoFEem8ho2EKpkedA" annotatedElement="_1Wxtj1oFEem8ho2EKpkedA">
@@ -917,45 +863,141 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
             </ownedOperation>
           </nestedClassifier>
         </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_jq8n8Ia_Eem-Bqe-8iJe-g" name="IXMaterial">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_1lgwEIa_Eem-Bqe-8iJe-g" annotatedElement="_jq8n8Ia_Eem-Bqe-8iJe-g">
+            <body>Provides interface to attach shaders to a given program, link them and use them for rendering a component</body>
+          </ownedComment>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_DdnHUIbLEem-Bqe-8iJe-g" name="IXMaterialSharedPtr"/>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_EsJlUI6SEemW9p4WMdxRmw" name="IXMaterialSharedPtrVec"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_73uVAIa_Eem-Bqe-8iJe-g" name="attachShader" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_s0lbEIbBEem-Bqe-8iJe-g" annotatedElement="_73uVAIa_Eem-Bqe-8iJe-g">
+              <body>Attaches a shader to be linked with the current program</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_FZOgcIbAEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_KatdUIbAEem-Bqe-8iJe-g" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_MXKtgIbBEem-Bqe-8iJe-g" name="createMaterial" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_5SPxcIbIEem-Bqe-8iJe-g" annotatedElement="_MXKtgIbBEem-Bqe-8iJe-g">
+              <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_-rnC0IbIEem-Bqe-8iJe-g" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Ve3ZwI6AEemW9p4WMdxRmw" name="getCompilationErrors" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_Ve3ZwY6AEemW9p4WMdxRmw" annotatedElement="_Ve3ZwI6AEemW9p4WMdxRmw">
+              <body>Queries any errors, which might have happened during the compilation of the shaders</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ve3Zwo6AEemW9p4WMdxRmw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_NUnTkIbJEem-Bqe-8iJe-g" name="getLinkErrors" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_TEY50IbJEem-Bqe-8iJe-g" annotatedElement="_NUnTkIbJEem-Bqe-8iJe-g">
+              <body>Queries any errors, which might have happened during shaders linking</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjyUcIbJEem-Bqe-8iJe-g" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_vwKsUIbKEem-Bqe-8iJe-g" name="useMaterial" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_573EQIbKEem-Bqe-8iJe-g" annotatedElement="_vwKsUIbKEem-Bqe-8iJe-g">
+              <body>Activates the material to be used for the upcoming rendering</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_8CCGkIbKEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_SQ5VcIbLEem-Bqe-8iJe-g" name="IXMaterial"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_W2hTwI6BEemW9p4WMdxRmw" name="XOpenGlMaterial">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_XPV8EI6EEemW9p4WMdxRmw" annotatedElement="_jq8n8Ia_Eem-Bqe-8iJe-g">
+            <body>Provides realization of the IXMaterial interface for OpenGL</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="__huv4I6GEemW9p4WMdxRmw" name="mOpenGlMaterialImpl" visibility="private" type="_b9RY4I6GEemW9p4WMdxRmw" association="__hsToI6GEemW9p4WMdxRmw">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__hvW8I6GEemW9p4WMdxRmw"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__hvW8Y6GEemW9p4WMdxRmw" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_F-NygI6EEemW9p4WMdxRmw" client="_W2hTwI6BEemW9p4WMdxRmw" supplier="_jq8n8Ia_Eem-Bqe-8iJe-g" contract="_jq8n8Ia_Eem-Bqe-8iJe-g"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPWjIY6EEemW9p4WMdxRmw" name="attachShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XPWjIo6EEemW9p4WMdxRmw" annotatedElement="_XPWjIY6EEemW9p4WMdxRmw">
+              <body>Attaches a shader to be linked with the current program</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPWjI46EEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPWjJI6EEemW9p4WMdxRmw" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPYYUI6EEemW9p4WMdxRmw" name="createMaterial">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XPYYUY6EEemW9p4WMdxRmw" annotatedElement="_XPYYUI6EEemW9p4WMdxRmw">
+              <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPYYUo6EEemW9p4WMdxRmw" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPY_YI6EEemW9p4WMdxRmw" name="getCompilationErrors">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XPY_YY6EEemW9p4WMdxRmw" annotatedElement="_XPY_YI6EEemW9p4WMdxRmw">
+              <body>Queries any errors, which might have happened during the compilation of the shaders</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPY_Yo6EEemW9p4WMdxRmw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPaNgI6EEemW9p4WMdxRmw" name="getLinkErrors">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XPaNgY6EEemW9p4WMdxRmw" annotatedElement="_XPaNgI6EEemW9p4WMdxRmw">
+              <body>Queries any errors, which might have happened during shaders linking</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPaNgo6EEemW9p4WMdxRmw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPcpwI6EEemW9p4WMdxRmw" name="useMaterial">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_XPcpwY6EEemW9p4WMdxRmw" annotatedElement="_XPcpwI6EEemW9p4WMdxRmw">
+              <body>Activates the material to be used for the upcoming rendering</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPcpwo6EEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_XPee8I6EEemW9p4WMdxRmw" name="XOpenGlMaterial"/>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_XPWjII6EEemW9p4WMdxRmw" name="IXMaterialSharedPtr"/>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_b9RY4I6GEemW9p4WMdxRmw" name="XOpenGlMaterialImpl" visibility="private">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_6WSwUI6HEemW9p4WMdxRmw" name="mAttachedShaders" visibility="private" type="_EsJlUI6SEemW9p4WMdxRmw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_EpjZwI6REemW9p4WMdxRmw" annotatedElement="_6WSwUI6HEemW9p4WMdxRmw">
+                <body>XVector&lt;IXShaderSharedPtr></body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_W_I0gI6SEemW9p4WMdxRmw" name="mCompilationErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_dNZtkI6SEemW9p4WMdxRmw" name="mLinkerErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nkRQI6GEemW9p4WMdxRmw" name="attachShader">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_2nkRQY6GEemW9p4WMdxRmw" annotatedElement="_2nkRQI6GEemW9p4WMdxRmw">
+                <body>Attaches a shader to be linked with the current program</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2nkRQo6GEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2nkRQ46GEemW9p4WMdxRmw" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nlfYI6GEemW9p4WMdxRmw" name="createMaterial">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_2nlfYY6GEemW9p4WMdxRmw" annotatedElement="_2nlfYI6GEemW9p4WMdxRmw">
+                <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2nlfYo6GEemW9p4WMdxRmw" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nmtgI6GEemW9p4WMdxRmw" name="getCompilationErrors">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_2nmtgY6GEemW9p4WMdxRmw" annotatedElement="_2nmtgI6GEemW9p4WMdxRmw">
+                <body>Queries any errors, which might have happened during the compilation of the shaders</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2nmtgo6GEemW9p4WMdxRmw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2nnUkI6GEemW9p4WMdxRmw" name="getLinkErrors">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_2nnUkY6GEemW9p4WMdxRmw" annotatedElement="_2nnUkI6GEemW9p4WMdxRmw">
+                <body>Queries any errors, which might have happened during shaders linking</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2nnUko6GEemW9p4WMdxRmw" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_2npJwI6GEemW9p4WMdxRmw" name="useMaterial">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_2npJwY6GEemW9p4WMdxRmw" annotatedElement="_2npJwI6GEemW9p4WMdxRmw">
+                <body>Activates the material to be used for the upcoming rendering</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_2npJwo6GEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_PkVXsFoMEemQbZgVyJcaYQ" memberEnd="_PkaQMFoMEemQbZgVyJcaYQ _PkbeUVoMEemQbZgVyJcaYQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PkZpIFoMEemQbZgVyJcaYQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PkZpIVoMEemQbZgVyJcaYQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_PkbeUVoMEemQbZgVyJcaYQ" name="xbinaryshader" type="_1WxtYFoFEem8ho2EKpkedA" association="_PkVXsFoMEemQbZgVyJcaYQ"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="__hsToI6GEemW9p4WMdxRmw" memberEnd="__huv4I6GEemW9p4WMdxRmw __hvW8o6GEemW9p4WMdxRmw">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__hthwI6GEemW9p4WMdxRmw" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__huI0I6GEemW9p4WMdxRmw" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="__hvW8o6GEemW9p4WMdxRmw" name="xopenglmaterial" type="_W2hTwI6BEemW9p4WMdxRmw" association="__hsToI6GEemW9p4WMdxRmw"/>
+        </packagedElement>
       </packagedElement>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Association" xmi:id="_PkVXsFoMEemQbZgVyJcaYQ" memberEnd="_PkaQMFoMEemQbZgVyJcaYQ _PkbeUVoMEemQbZgVyJcaYQ">
-      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PkZpIFoMEemQbZgVyJcaYQ" source="org.eclipse.papyrus">
-        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_PkZpIVoMEemQbZgVyJcaYQ" key="nature" value="UML_Nature"/>
-      </eAnnotations>
-      <ownedEnd xmi:type="uml:Property" xmi:id="_PkbeUVoMEemQbZgVyJcaYQ" name="xbinaryshader" type="_1WxtYFoFEem8ho2EKpkedA" association="_PkVXsFoMEemQbZgVyJcaYQ"/>
-    </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_jq8n8Ia_Eem-Bqe-8iJe-g" name="IXMaterial">
-      <ownedComment xmi:type="uml:Comment" xmi:id="_1lgwEIa_Eem-Bqe-8iJe-g" annotatedElement="_jq8n8Ia_Eem-Bqe-8iJe-g">
-        <body>Provides interface to attach shaders to a given program, link them and use them for rendering a component</body>
-      </ownedComment>
-      <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_DdnHUIbLEem-Bqe-8iJe-g" name="IXMaterialSharedPtr"/>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_73uVAIa_Eem-Bqe-8iJe-g" name="attachShader" isAbstract="true">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_s0lbEIbBEem-Bqe-8iJe-g" annotatedElement="_73uVAIa_Eem-Bqe-8iJe-g">
-          <body>Attaches a shader to be linked with the current program</body>
-        </ownedComment>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FZOgcIbAEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_KatdUIbAEem-Bqe-8iJe-g" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_MXKtgIbBEem-Bqe-8iJe-g" name="linkProgram" isAbstract="true">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_5SPxcIbIEem-Bqe-8iJe-g" annotatedElement="_MXKtgIbBEem-Bqe-8iJe-g">
-          <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
-        </ownedComment>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_-rnC0IbIEem-Bqe-8iJe-g" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_NUnTkIbJEem-Bqe-8iJe-g" name="getLinkErrors" isAbstract="true">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_TEY50IbJEem-Bqe-8iJe-g" annotatedElement="_NUnTkIbJEem-Bqe-8iJe-g">
-          <body>Queries any errors, which might have happened during shaders linking</body>
-        </ownedComment>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_VjyUcIbJEem-Bqe-8iJe-g" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_vwKsUIbKEem-Bqe-8iJe-g" name="useMaterial" isAbstract="true">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_573EQIbKEem-Bqe-8iJe-g" annotatedElement="_vwKsUIbKEem-Bqe-8iJe-g">
-          <body>Activates the material to be used for the upcoming rendering</body>
-        </ownedComment>
-        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8CCGkIbKEem-Bqe-8iJe-g" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-      </ownedOperation>
-      <ownedOperation xmi:type="uml:Operation" xmi:id="_SQ5VcIbLEem-Bqe-8iJe-g" name="IXMaterial"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z53xQDhkEemJ9Iqu6RJn7w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z55mcDhkEemJ9Iqu6RJn7w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -971,14 +1013,14 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
     </profileApplication>
   </uml:Model>
   <C_Cpp:Typedef xmi:id="_hfSWYDhXEemJ9Iqu6RJn7w" definition="void" base_primitivetype="_UiccwDEVEemPSJ3g7P3waw"/>
-  <C_Cpp:Typedef xmi:id="_GgdboDhbEemJ9Iqu6RJn7w" definition="GLfloat" base_primitivetype="_a1Th8DEVEemPSJ3g7P3waw"/>
-  <C_Cpp:Typedef xmi:id="_PbVE4DhbEemJ9Iqu6RJn7w" definition="GLint" base_primitivetype="_kXXHADEVEemPSJ3g7P3waw"/>
+  <C_Cpp:Typedef xmi:id="_GgdboDhbEemJ9Iqu6RJn7w" definition="float" base_primitivetype="_a1Th8DEVEemPSJ3g7P3waw"/>
+  <C_Cpp:Typedef xmi:id="_PbVE4DhbEemJ9Iqu6RJn7w" definition="int" base_primitivetype="_kXXHADEVEemPSJ3g7P3waw"/>
   <C_Cpp:Typedef xmi:id="_t-haEDheEemJ9Iqu6RJn7w" definition="std::unique_ptr" base_primitivetype="_CU7o0DOZEemHGoXhG_mZKw"/>
   <C_Cpp:Typedef xmi:id="_5EEyMDheEemJ9Iqu6RJn7w" definition="std::vector" base_primitivetype="_MztfYDOaEemHGoXhG_mZKw"/>
   <C_Cpp:Typedef xmi:id="_-O9isDheEemJ9Iqu6RJn7w" definition="std::string" base_primitivetype="_SVCZ8DOaEemHGoXhG_mZKw"/>
-  <C_Cpp:Typedef xmi:id="_BTeckDhfEemJ9Iqu6RJn7w" definition="GLchar" base_primitivetype="_VV2CcDZhEemwVeeG6mXgJQ"/>
+  <C_Cpp:Typedef xmi:id="_BTeckDhfEemJ9Iqu6RJn7w" definition="char" base_primitivetype="_VV2CcDZhEemwVeeG6mXgJQ"/>
   <C_Cpp:Typedef xmi:id="_ISQMkDhfEemJ9Iqu6RJn7w" definition="XChar*" base_primitivetype="_TMTtoDZiEemwVeeG6mXgJQ"/>
-  <C_Cpp:Typedef xmi:id="_NhQoEDhfEemJ9Iqu6RJn7w" definition="GLboolean" base_primitivetype="_w0v1UDZmEemwVeeG6mXgJQ"/>
+  <C_Cpp:Typedef xmi:id="_NhQoEDhfEemJ9Iqu6RJn7w" definition="bool" base_primitivetype="_w0v1UDZmEemwVeeG6mXgJQ"/>
   <C_Cpp:Include xmi:id="_Yr24QDhfEemJ9Iqu6RJn7w" header="#include &quot;GL/gl.h&quot;" base_package="_PbDFIDEVEemPSJ3g7P3waw"/>
   <C_Cpp:NoCodeGen xmi:id="_h6c8gDhkEemJ9Iqu6RJn7w" base_element="_SljZwC-KEemTK83giqrJTA"/>
   <C_Cpp:ExternLibrary xmi:id="_eA0jEDhlEemJ9Iqu6RJn7w" base_package="_6QMDIDREEem9jI_jcJnhpA"/>
@@ -1048,18 +1090,13 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
   <C_Cpp:Virtual xmi:id="_EOk6IFYLEemQOYxlVnSqqA" base_operation="_EOh20FYLEemQOYxlVnSqqA"/>
   <C_Cpp:Virtual xmi:id="_qdtHoFYLEemQOYxlVnSqqA" base_operation="_m4X_sFYLEemQOYxlVnSqqA"/>
   <C_Cpp:Virtual xmi:id="_9A-OgFYLEemQOYxlVnSqqA" base_operation="_35VmUFYLEemQOYxlVnSqqA"/>
-  <C_Cpp:Const xmi:id="_CQB5wFnwEemQdatIlMvaCg" base_operation="_6ENH0FnvEemQdatIlMvaCg"/>
   <C_Cpp:Typedef xmi:id="_PTMOEFnwEemQdatIlMvaCg" definition="XSharedPtr&lt;IXShader>" base_primitivetype="_MOP2YFnwEemQdatIlMvaCg"/>
   <C_Cpp:NoCodeGen xmi:id="_hpvHkFnwEemQdatIlMvaCg" base_element="_cO854FnwEemQdatIlMvaCg"/>
   <C_Cpp:Typedef xmi:id="_sBLcgFnwEemQdatIlMvaCg" definition="std::shared_ptr" base_primitivetype="_sBKOYFnwEemQdatIlMvaCg"/>
-  <C_Cpp:Const xmi:id="_f-l-81nxEemQdatIlMvaCg" base_operation="_f-l-8FnxEemQdatIlMvaCg"/>
   <C_Cpp:Typedef xmi:id="_mjvG8FnxEemQdatIlMvaCg" definition="XSharedPtr&lt;XStringShader>" base_primitivetype="_mjt40FnxEemQdatIlMvaCg"/>
-  <C_Cpp:Typedef xmi:id="_-FuKkFnxEemQdatIlMvaCg" definition="GLuint" base_primitivetype="_-FtjgFnxEemQdatIlMvaCg"/>
-  <C_Cpp:Typedef xmi:id="_dZK_YFnyEemQdatIlMvaCg" definition="GLenum{GL_VERTEX_SHADER, GL_TESS_CONTROL_SHADER, GL_TESS_EVALUATION_SHADER, GL_GEOMETRY_SHADER, GL_FRAGMENT_SHADER, GL_COMPUTE_SHADER}" base_primitivetype="_dZKYUFnyEemQdatIlMvaCg"/>
+  <C_Cpp:Typedef xmi:id="_-FuKkFnxEemQdatIlMvaCg" definition="unsigned int" base_primitivetype="_-FtjgFnxEemQdatIlMvaCg"/>
   <C_Cpp:Const xmi:id="_pmxvQFnzEemQdatIlMvaCg" base_operation="_TZN9YFnyEemQdatIlMvaCg"/>
   <C_Cpp:Const xmi:id="_w3e8wFnzEemQdatIlMvaCg" base_operation="_w3cggFnzEemQdatIlMvaCg"/>
-  <C_Cpp:Const xmi:id="_Y8AloFn0EemQdatIlMvaCg" base_operation="_Y79iUFn0EemQdatIlMvaCg"/>
-  <C_Cpp:Const xmi:id="_nPAKIFn0EemQdatIlMvaCg" base_operation="_nO9t4Fn0EemQdatIlMvaCg"/>
   <standard:Create xmi:id="__sRxUFn0EemQdatIlMvaCg" base_BehavioralFeature="_9hNn8Fn0EemQdatIlMvaCg"/>
   <C_Cpp:Ref xmi:id="_IJU2IFn1EemQdatIlMvaCg" base_parameter="_Fce1YFn1EemQdatIlMvaCg"/>
   <standard:Destroy xmi:id="_YsV8gFn1EemQdatIlMvaCg" base_BehavioralFeature="_V_SgYFn1EemQdatIlMvaCg"/>
@@ -1072,40 +1109,42 @@ using XUniquePtr = std::unique_ptr&lt;T>;</body>
   <standard:Create xmi:id="_55mj4Fn7Eem8ho2EKpkedA" base_BehavioralFeature="_55kHoFn7Eem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="_55nyAFn7Eem8ho2EKpkedA" base_parameter="_55kHoVn7Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_oG0pUFn8Eem8ho2EKpkedA" base_operation="_gEOE0Fn8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_rBdOcFn8Eem8ho2EKpkedA" base_operation="_rBXu4Fn8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_rBd1gFn8Eem8ho2EKpkedA" base_operation="_rBZkEFn8Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_rBfDoFn8Eem8ho2EKpkedA" base_operation="_rBcAUFn8Eem8ho2EKpkedA"/>
   <standard:Create xmi:id="__vCQwFn8Eem8ho2EKpkedA" base_BehavioralFeature="__u_Ndln8Eem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="__vC30Fn8Eem8ho2EKpkedA" base_parameter="__u_Nd1n8Eem8ho2EKpkedA"/>
   <standard:Destroy xmi:id="__vDe4Fn8Eem8ho2EKpkedA" base_BehavioralFeature="__u_NeVn8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="__vEtAFn8Eem8ho2EKpkedA" base_operation="__u_NgFn8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="__vF7IFn8Eem8ho2EKpkedA" base_operation="__u_Ng1n8Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="__vGiMFn8Eem8ho2EKpkedA" base_operation="__u_Nhln8Eem8ho2EKpkedA"/>
   <C_Cpp:Typedef xmi:id="__vHJQFn8Eem8ho2EKpkedA" definition="XSharedPtr&lt;XStringShader>" base_primitivetype="__u_NiVn8Eem8ho2EKpkedA"/>
   <standard:Create xmi:id="__vIXYFn8Eem8ho2EKpkedA" base_BehavioralFeature="__u_NkFn8Eem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="__vI-cFn8Eem8ho2EKpkedA" base_parameter="__u_NkVn8Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="__vJlgFn8Eem8ho2EKpkedA" base_operation="__u_Nk1n8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="__vKMkFn8Eem8ho2EKpkedA" base_operation="__u_NlVn8Eem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="__vKzoFn8Eem8ho2EKpkedA" base_operation="__u_NmFn8Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="__vKzoVn8Eem8ho2EKpkedA" base_operation="__u_Nm1n8Eem8ho2EKpkedA"/>
   <standard:Create xmi:id="_1Wy7gFoFEem8ho2EKpkedA" base_BehavioralFeature="_1WxtZloFEem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="_1WzikFoFEem8ho2EKpkedA" base_parameter="_1WxtZ1oFEem8ho2EKpkedA"/>
   <standard:Destroy xmi:id="_1WzikVoFEem8ho2EKpkedA" base_BehavioralFeature="_1WxtaVoFEem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_1W0JoFoFEem8ho2EKpkedA" base_operation="_1WxtcFoFEem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_1W0JoVoFEem8ho2EKpkedA" base_operation="_1Wxtc1oFEem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_1W0wsFoFEem8ho2EKpkedA" base_operation="_1WxtdloFEem8ho2EKpkedA"/>
   <C_Cpp:Typedef xmi:id="_1W0wsVoFEem8ho2EKpkedA" definition="XSharedPtr&lt;XStringShader>" base_primitivetype="_1WxteVoFEem8ho2EKpkedA"/>
   <standard:Create xmi:id="_1W1XwFoFEem8ho2EKpkedA" base_BehavioralFeature="_1WxtgVoFEem8ho2EKpkedA"/>
   <C_Cpp:Ref xmi:id="_1W1-0FoFEem8ho2EKpkedA" base_parameter="_1WxtgloFEem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_1W2l4FoFEem8ho2EKpkedA" base_operation="_1WxthFoFEem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_1W2l4VoFEem8ho2EKpkedA" base_operation="_1WxthloFEem8ho2EKpkedA"/>
-  <C_Cpp:Const xmi:id="_1W3M8FoFEem8ho2EKpkedA" base_operation="_1WxtiVoFEem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_1W30AFoFEem8ho2EKpkedA" base_operation="_1WxtjFoFEem8ho2EKpkedA"/>
-  <C_Cpp:Ptr xmi:id="_WAAaoFoMEemQbZgVyJcaYQ" base_property="_PkaQMFoMEemQbZgVyJcaYQ"/>
+  <C_Cpp:Ptr xmi:id="_WAAaoFoMEemQbZgVyJcaYQ" base_property="_PkaQMFoMEemQbZgVyJcaYQ" declaration=""/>
   <C_Cpp:Ptr xmi:id="_XA0-cFoMEemQbZgVyJcaYQ" base_property="_efsFEFn-Eem8ho2EKpkedA"/>
   <C_Cpp:Const xmi:id="_aGWgsIbJEem-Bqe-8iJe-g" base_operation="_NUnTkIbJEem-Bqe-8iJe-g"/>
   <C_Cpp:Const xmi:id="_9DF68IbKEem-Bqe-8iJe-g" base_operation="_vwKsUIbKEem-Bqe-8iJe-g"/>
   <C_Cpp:Typedef xmi:id="_J2bqkIbLEem-Bqe-8iJe-g" definition="XSharedPtr&lt;IXMaterial>" base_primitivetype="_DdnHUIbLEem-Bqe-8iJe-g"/>
   <standard:Destroy xmi:id="_W1gwIIbLEem-Bqe-8iJe-g" base_BehavioralFeature="_SQ5VcIbLEem-Bqe-8iJe-g"/>
   <C_Cpp:Virtual xmi:id="_W2VPgIbLEem-Bqe-8iJe-g" base_operation="_SQ5VcIbLEem-Bqe-8iJe-g"/>
+  <C_Cpp:Typedef xmi:id="_aQJhEI3IEemW9p4WMdxRmw" definition="const XCharPtr" base_primitivetype="_aQAXII3IEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_VfMw8I6AEemW9p4WMdxRmw" base_operation="_Ve3ZwI6AEemW9p4WMdxRmw"/>
+  <C_Cpp:Typedef xmi:id="_XPftEI6EEemW9p4WMdxRmw" definition="XSharedPtr&lt;XOpenGlMaterial>" base_primitivetype="_XPWjII6EEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_XPgUII6EEemW9p4WMdxRmw" base_operation="_XPY_YI6EEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_XPgUIY6EEemW9p4WMdxRmw" base_operation="_XPaNgI6EEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_XPg7MI6EEemW9p4WMdxRmw" base_operation="_XPcpwI6EEemW9p4WMdxRmw"/>
+  <standard:Destroy xmi:id="_XPg7MY6EEemW9p4WMdxRmw" base_BehavioralFeature="_XPee8I6EEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_2nrmAI6GEemW9p4WMdxRmw" base_operation="_2nmtgI6GEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_2nsNEI6GEemW9p4WMdxRmw" base_operation="_2nnUkI6GEemW9p4WMdxRmw"/>
+  <C_Cpp:Const xmi:id="_2nsNEY6GEemW9p4WMdxRmw" base_operation="_2npJwI6GEemW9p4WMdxRmw"/>
+  <C_Cpp:Ptr xmi:id="_WRQb0I6HEemW9p4WMdxRmw" base_property="__huv4I6GEemW9p4WMdxRmw"/>
+  <C_Cpp:Typedef xmi:id="_EsKMYI6SEemW9p4WMdxRmw" definition="XVector&lt;IXMaterialSharedPtr>" base_primitivetype="_EsJlUI6SEemW9p4WMdxRmw"/>
 </xmi:XMI>
