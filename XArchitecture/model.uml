@@ -314,6 +314,48 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             </ownedComment>
           </ownedLiteral>
         </packagedElement>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_EuEJUJDhEemtHZ4o4EK6wA" name="XVertexPositionsFVec">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_QkQ7QJDhEemtHZ4o4EK6wA" annotatedElement="_EuEJUJDhEemtHZ4o4EK6wA">
+            <body>Keeps x, y and z positions values for a set of vertices - 3 float type elements per vertex</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_gkVFkJDhEemtHZ4o4EK6wA" name="XVertexColorsFVec">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_gkVFkZDhEemtHZ4o4EK6wA" annotatedElement="_gkVFkJDhEemtHZ4o4EK6wA">
+            <body>Keeps red, green, blue and alpha channels values for the colors of a set of vertices - 4 float type elements per vertex</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_zXg3wJDhEemtHZ4o4EK6wA" name="XVertexNormalsFVec">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_zXg3wZDhEemtHZ4o4EK6wA" annotatedElement="_zXg3wJDhEemtHZ4o4EK6wA">
+            <body>Keeps x, y and z position values for the normals of a set of vertices - 3 float type elements per vertex</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_eWNnMJDsEemtHZ4o4EK6wA" name="XVertexTextureCoordinatesFVec">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_eWNnMZDsEemtHZ4o4EK6wA" annotatedElement="_eWNnMJDsEemtHZ4o4EK6wA">
+            <body>Keeps x, y texture coordinates values for a set of vertices - 2 float type elements per vertex</body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_vM4XcJDuEemtHZ4o4EK6wA" name="XVertexIndicesIVec">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_vM4XcZDuEemtHZ4o4EK6wA" annotatedElement="_vM4XcJDuEemtHZ4o4EK6wA">
+            <body>Keeps the indices order, which is used to draw a renderable object </body>
+          </ownedComment>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_RsLcMJD6EemtHZ4o4EK6wA" name="XRenderableObjectLoadStatus">
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_aSl4YJD6EemtHZ4o4EK6wA" name="Success">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_aSl4YZD6EemtHZ4o4EK6wA" annotatedElement="_aSl4YJD6EemtHZ4o4EK6wA">
+              <body>The object description was loaded correctly</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_gSm6EJD6EemtHZ4o4EK6wA" name="ObjectSourceNotFound">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_gSm6EZD6EemtHZ4o4EK6wA" annotatedElement="_gSm6EJD6EemtHZ4o4EK6wA">
+              <body>The file, database or other external source, containing the object description was not found or it is not accessable</body>
+            </ownedComment>
+          </ownedLiteral>
+          <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_ynJzAJD7EemtHZ4o4EK6wA" name="NotEnoughMemory">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_ynJzAZD7EemtHZ4o4EK6wA" annotatedElement="_ynJzAJD7EemtHZ4o4EK6wA">
+              <body>The amount of available memory is not enough to load the object description</body>
+            </ownedComment>
+          </ownedLiteral>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_6QMDIDREEem9jI_jcJnhpA" name="XThirdPartyTypes">
         <ownedComment xmi:type="uml:Comment" xmi:id="_BX8I8DRFEem9jI_jcJnhpA" annotatedElement="_6QMDIDREEem9jI_jcJnhpA">
@@ -943,7 +985,7 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_XPcpwo6EEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_XPee8I6EEemW9p4WMdxRmw" name="XOpenGlMaterial"/>
-          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_XPWjII6EEemW9p4WMdxRmw" name="IXMaterialSharedPtr"/>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_XPWjII6EEemW9p4WMdxRmw" name="XOpenGlMaterialSharedPtr"/>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_b9RY4I6GEemW9p4WMdxRmw" name="XOpenGlMaterialImpl" visibility="private">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6WSwUI6HEemW9p4WMdxRmw" name="mAttachedShaders" visibility="private" type="_EsJlUI6SEemW9p4WMdxRmw">
               <ownedComment xmi:type="uml:Comment" xmi:id="_EpjZwI6REemW9p4WMdxRmw" annotatedElement="_6WSwUI6HEemW9p4WMdxRmw">
@@ -952,6 +994,7 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_W_I0gI6SEemW9p4WMdxRmw" name="mCompilationErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_dNZtkI6SEemW9p4WMdxRmw" name="mLinkerErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_83rqoJDaEemtHZ4o4EK6wA" name="mMaterialProgramId" visibility="private" type="_-FtjgFnxEemQdatIlMvaCg"/>
             <ownedOperation xmi:type="uml:Operation" xmi:id="_2nkRQI6GEemW9p4WMdxRmw" name="attachShader">
               <ownedComment xmi:type="uml:Comment" xmi:id="_2nkRQY6GEemW9p4WMdxRmw" annotatedElement="_2nkRQI6GEemW9p4WMdxRmw">
                 <body>Attaches a shader to be linked with the current program</body>
@@ -984,6 +1027,12 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
               <ownedParameter xmi:type="uml:Parameter" xmi:id="_2npJwo6GEemW9p4WMdxRmw" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
             </ownedOperation>
           </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="__hsToI6GEemW9p4WMdxRmw" memberEnd="__huv4I6GEemW9p4WMdxRmw __hvW8o6GEemW9p4WMdxRmw">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__hthwI6GEemW9p4WMdxRmw" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__huI0I6GEemW9p4WMdxRmw" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="__hvW8o6GEemW9p4WMdxRmw" name="xopenglmaterial" type="_W2hTwI6BEemW9p4WMdxRmw" association="__hsToI6GEemW9p4WMdxRmw"/>
+          </nestedClassifier>
         </packagedElement>
         <packagedElement xmi:type="uml:Association" xmi:id="_PkVXsFoMEemQbZgVyJcaYQ" memberEnd="_PkaQMFoMEemQbZgVyJcaYQ _PkbeUVoMEemQbZgVyJcaYQ">
           <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_PkZpIFoMEemQbZgVyJcaYQ" source="org.eclipse.papyrus">
@@ -991,13 +1040,249 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
           </eAnnotations>
           <ownedEnd xmi:type="uml:Property" xmi:id="_PkbeUVoMEemQbZgVyJcaYQ" name="xbinaryshader" type="_1WxtYFoFEem8ho2EKpkedA" association="_PkVXsFoMEemQbZgVyJcaYQ"/>
         </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="__hsToI6GEemW9p4WMdxRmw" memberEnd="__huv4I6GEemW9p4WMdxRmw __hvW8o6GEemW9p4WMdxRmw">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__hthwI6GEemW9p4WMdxRmw" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__huI0I6GEemW9p4WMdxRmw" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="__hvW8o6GEemW9p4WMdxRmw" name="xopenglmaterial" type="_W2hTwI6BEemW9p4WMdxRmw" association="__hsToI6GEemW9p4WMdxRmw"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_QRks8JDaEemtHZ4o4EK6wA" name="XOpenGlesMaterial">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_QRks8ZDaEemtHZ4o4EK6wA" annotatedElement="_jq8n8Ia_Eem-Bqe-8iJe-g">
+            <body>Provides realization of the IXMaterial interface for OpenGL ES&#xD;
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_QRks8pDaEemtHZ4o4EK6wA" name="mOpenGlesMaterialImpl" visibility="private" type="_QRktCJDaEemtHZ4o4EK6wA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QRks85DaEemtHZ4o4EK6wA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QRks9JDaEemtHZ4o4EK6wA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zHnpUJDbEemtHZ4o4EK6wA" name="xopenglesmaterialimpl" type="_QRktCJDaEemtHZ4o4EK6wA" association="_zHiJwJDbEemtHZ4o4EK6wA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zHnpUZDbEemtHZ4o4EK6wA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zHnpUpDbEemtHZ4o4EK6wA" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_QRks9ZDaEemtHZ4o4EK6wA" client="_QRks8JDaEemtHZ4o4EK6wA" supplier="_jq8n8Ia_Eem-Bqe-8iJe-g" contract="_jq8n8Ia_Eem-Bqe-8iJe-g"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRks9pDaEemtHZ4o4EK6wA" name="attachShader">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_QRks95DaEemtHZ4o4EK6wA" annotatedElement="_QRks9pDaEemtHZ4o4EK6wA">
+              <body>Attaches a shader to be linked with the current program</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRks-JDaEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRks-ZDaEemtHZ4o4EK6wA" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRks-pDaEemtHZ4o4EK6wA" name="createMaterial">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_QRks-5DaEemtHZ4o4EK6wA" annotatedElement="_QRks-pDaEemtHZ4o4EK6wA">
+              <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRks_JDaEemtHZ4o4EK6wA" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRks_ZDaEemtHZ4o4EK6wA" name="getCompilationErrors">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_QRks_pDaEemtHZ4o4EK6wA" annotatedElement="_QRks_ZDaEemtHZ4o4EK6wA">
+              <body>Queries any errors, which might have happened during the compilation of the shaders</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRks_5DaEemtHZ4o4EK6wA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktAJDaEemtHZ4o4EK6wA" name="getLinkErrors">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_QRktAZDaEemtHZ4o4EK6wA" annotatedElement="_QRktAJDaEemtHZ4o4EK6wA">
+              <body>Queries any errors, which might have happened during shaders linking</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktApDaEemtHZ4o4EK6wA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktA5DaEemtHZ4o4EK6wA" name="useMaterial">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_QRktBJDaEemtHZ4o4EK6wA" annotatedElement="_QRktA5DaEemtHZ4o4EK6wA">
+              <body>Activates the material to be used for the upcoming rendering</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktBZDaEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktBpDaEemtHZ4o4EK6wA" name="XOpenGlesMaterial"/>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_QRktB5DaEemtHZ4o4EK6wA" name="XOpenGlesMaterialSharedPtr"/>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="_zHiJwJDbEemtHZ4o4EK6wA" memberEnd="_zHnpUJDbEemtHZ4o4EK6wA _zHoQYJDbEemtHZ4o4EK6wA">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_zHmbMJDbEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_zHnCQJDbEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_zHoQYJDbEemtHZ4o4EK6wA" name="xopenglesmaterial" type="_QRks8JDaEemtHZ4o4EK6wA" association="_zHiJwJDbEemtHZ4o4EK6wA"/>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_QRktCJDaEemtHZ4o4EK6wA" name="XOpenGlesMaterialImpl" visibility="private">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QRktCZDaEemtHZ4o4EK6wA" name="mAttachedShaders" visibility="private" type="_EsJlUI6SEemW9p4WMdxRmw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktCpDaEemtHZ4o4EK6wA" annotatedElement="_QRktCZDaEemtHZ4o4EK6wA">
+                <body>XVector&lt;IXShaderSharedPtr></body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QRktC5DaEemtHZ4o4EK6wA" name="mCompilationErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_QRktDJDaEemtHZ4o4EK6wA" name="mLinkerErrors" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_FAVMwJDbEemtHZ4o4EK6wA" name="mMaterialProgramId" visibility="private" type="_-FtjgFnxEemQdatIlMvaCg"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktDZDaEemtHZ4o4EK6wA" name="attachShader">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktDpDaEemtHZ4o4EK6wA" annotatedElement="_QRktDZDaEemtHZ4o4EK6wA">
+                <body>Attaches a shader to be linked with the current program</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktD5DaEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktEJDaEemtHZ4o4EK6wA" name="aShader" type="_MOP2YFnwEemQdatIlMvaCg"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktEZDaEemtHZ4o4EK6wA" name="createMaterial">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktEpDaEemtHZ4o4EK6wA" annotatedElement="_QRktEZDaEemtHZ4o4EK6wA">
+                <body>Links the already attached shaders into the program. No linking will take place if no shader is attached. In this case the method will return false </body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktE5DaEemtHZ4o4EK6wA" type="_w0v1UDZmEemwVeeG6mXgJQ" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktFJDaEemtHZ4o4EK6wA" name="getCompilationErrors">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktFZDaEemtHZ4o4EK6wA" annotatedElement="_QRktFJDaEemtHZ4o4EK6wA">
+                <body>Queries any errors, which might have happened during the compilation of the shaders</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktFpDaEemtHZ4o4EK6wA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktF5DaEemtHZ4o4EK6wA" name="getLinkErrors">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktGJDaEemtHZ4o4EK6wA" annotatedElement="_QRktF5DaEemtHZ4o4EK6wA">
+                <body>Queries any errors, which might have happened during shaders linking</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktGZDaEemtHZ4o4EK6wA" type="_SVCZ8DOaEemHGoXhG_mZKw" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QRktGpDaEemtHZ4o4EK6wA" name="useMaterial">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_QRktG5DaEemtHZ4o4EK6wA" annotatedElement="_QRktGpDaEemtHZ4o4EK6wA">
+                <body>Activates the material to be used for the upcoming rendering</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_QRktHJDaEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
         </packagedElement>
       </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_vacQIJDfEemtHZ4o4EK6wA" name="XRenderableObjects">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_514UQJDfEemtHZ4o4EK6wA" name="IXModelLoader" isAbstract="true">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_d3WXYJDgEemtHZ4o4EK6wA" annotatedElement="_514UQJDfEemtHZ4o4EK6wA">
+            <body>Provides methods for loading an object properties like vertex positions, colors, normals, texture coordinates, etc. from external source like file or database&#xD;
+</body>
+          </ownedComment>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_I8GGoJD6EemtHZ4o4EK6wA" name="loadModel" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="__f7cQJD7EemtHZ4o4EK6wA" annotatedElement="_I8GGoJD6EemtHZ4o4EK6wA">
+              <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_5Lu6UJD7EemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_HsSqcJDgEemtHZ4o4EK6wA" name="getVertexPositions" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_UCuIsJDtEemtHZ4o4EK6wA" annotatedElement="_HsSqcJDgEemtHZ4o4EK6wA">
+              <body>Gets all vertex coordinates for a given renderable object. The coordinates are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6MWnoJDsEemtHZ4o4EK6wA" type="_EuEJUJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_4hLCwJDtEemtHZ4o4EK6wA" name="getVertexColors" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_4hLCwZDtEemtHZ4o4EK6wA" annotatedElement="_4hLCwJDtEemtHZ4o4EK6wA">
+              <body>Gets all vertex colors for a given renderable object. The colors are added to a vector, 4 elements (r, g, b, a) per vertex following each others:&#xD;
+** V1r, V1g, V1b, V1a, V2r, V2g, V2b, V2a, ... Vnr, Vng, Vnb, Vna</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_4hLCwpDtEemtHZ4o4EK6wA" type="_gkVFkJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_KOpKEJDuEemtHZ4o4EK6wA" name="getVertexNormals" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_KOpKEZDuEemtHZ4o4EK6wA" annotatedElement="_KOpKEJDuEemtHZ4o4EK6wA">
+              <body>Gets all vertex normals for a given renderable object. The normals are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_KOpKEpDuEemtHZ4o4EK6wA" type="_zXg3wJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_WfIrUJDuEemtHZ4o4EK6wA" name="getVertexTextureCoordinates" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_WfIrUZDuEemtHZ4o4EK6wA" annotatedElement="_WfIrUJDuEemtHZ4o4EK6wA">
+              <body>Gets all vertex texture coordinates for a given renderable object. The coordinates are added to a vector, 2 elements (x, y) per vertex following each others:&#xD;
+** V1x, V1y, V2x, V2y, ... Vnx, Vny</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_WfIrUpDuEemtHZ4o4EK6wA" type="_eWNnMJDsEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="__70Z8JDuEemtHZ4o4EK6wA" name="getObjectVertexIndices" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="__70Z8ZDuEemtHZ4o4EK6wA" annotatedElement="__70Z8JDuEemtHZ4o4EK6wA">
+              <body>Gets a vector with the vertex indices and their order, which needs to be followed in order to draw the object</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="__70Z8pDuEemtHZ4o4EK6wA" type="_vM4XcJDuEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_QglqcJEIEemtHZ4o4EK6wA" name="XFbxModelLoader">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wJEIEemtHZ4o4EK6wA" annotatedElement="_514UQJDfEemtHZ4o4EK6wA">
+            <body>Provides methods for loading an object properties like vertex positions, colors, normals, texture coordinates, etc. from .fbx file&#xD;
+</body>
+          </ownedComment>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9bgdspEMEemtHZ4o4EK6wA" name="mFbxMOdelLoaderImpl" visibility="private" type="_LVW0UJELEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9bhEwJEMEemtHZ4o4EK6wA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9bhEwZEMEemtHZ4o4EK6wA" value="1"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_fWIiYJEIEemtHZ4o4EK6wA" client="_QglqcJEIEemtHZ4o4EK6wA" supplier="_514UQJDfEemtHZ4o4EK6wA" contract="_514UQJDfEemtHZ4o4EK6wA"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD21wZEIEemtHZ4o4EK6wA" name="loadModel">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wpEIEemtHZ4o4EK6wA" annotatedElement="_kD21wZEIEemtHZ4o4EK6wA">
+              <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD21w5EIEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD4D4JEIEemtHZ4o4EK6wA" name="getVertexPositions">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD4D4ZEIEemtHZ4o4EK6wA" annotatedElement="_kD4D4JEIEemtHZ4o4EK6wA">
+              <body>Gets all vertex coordinates for a given renderable object. The coordinates are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD4D4pEIEemtHZ4o4EK6wA" type="_EuEJUJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD4q8JEIEemtHZ4o4EK6wA" name="getVertexColors">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD4q8ZEIEemtHZ4o4EK6wA" annotatedElement="_kD4q8JEIEemtHZ4o4EK6wA">
+              <body>Gets all vertex colors for a given renderable object. The colors are added to a vector, 4 elements (r, g, b, a) per vertex following each others:&#xD;
+** V1r, V1g, V1b, V1a, V2r, V2g, V2b, V2a, ... Vnr, Vng, Vnb, Vna</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD4q8pEIEemtHZ4o4EK6wA" type="_gkVFkJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD55EJEIEemtHZ4o4EK6wA" name="getVertexNormals">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD55EZEIEemtHZ4o4EK6wA" annotatedElement="_kD55EJEIEemtHZ4o4EK6wA">
+              <body>Gets all vertex normals for a given renderable object. The normals are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD55EpEIEemtHZ4o4EK6wA" type="_zXg3wJDhEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD7HMJEIEemtHZ4o4EK6wA" name="getVertexTextureCoordinates">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD7HMZEIEemtHZ4o4EK6wA" annotatedElement="_kD7HMJEIEemtHZ4o4EK6wA">
+              <body>Gets all vertex texture coordinates for a given renderable object. The coordinates are added to a vector, 2 elements (x, y) per vertex following each others:&#xD;
+** V1x, V1y, V2x, V2y, ... Vnx, Vny</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD7HMpEIEemtHZ4o4EK6wA" type="_eWNnMJDsEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD8VUJEIEemtHZ4o4EK6wA" name="getObjectVertexIndices">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD8VUZEIEemtHZ4o4EK6wA" annotatedElement="_kD8VUJEIEemtHZ4o4EK6wA">
+              <body>Gets a vector with the vertex indices and their order, which needs to be followed in order to draw the object</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD8VUpEIEemtHZ4o4EK6wA" type="_vM4XcJDuEemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LVW0UJELEemtHZ4o4EK6wA" name="XFbxModelLoaderImpl" visibility="private">
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0U5ELEemtHZ4o4EK6wA" name="loadModel">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0VJELEemtHZ4o4EK6wA" annotatedElement="_LVW0U5ELEemtHZ4o4EK6wA">
+                <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0VZELEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0VpELEemtHZ4o4EK6wA" name="getVertexPositions">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0V5ELEemtHZ4o4EK6wA" annotatedElement="_LVW0VpELEemtHZ4o4EK6wA">
+                <body>Gets all vertex coordinates for a given renderable object. The coordinates are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0WJELEemtHZ4o4EK6wA" type="_EuEJUJDhEemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0WZELEemtHZ4o4EK6wA" name="getVertexColors">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0WpELEemtHZ4o4EK6wA" annotatedElement="_LVW0WZELEemtHZ4o4EK6wA">
+                <body>Gets all vertex colors for a given renderable object. The colors are added to a vector, 4 elements (r, g, b, a) per vertex following each others:&#xD;
+** V1r, V1g, V1b, V1a, V2r, V2g, V2b, V2a, ... Vnr, Vng, Vnb, Vna</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0W5ELEemtHZ4o4EK6wA" type="_gkVFkJDhEemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0XJELEemtHZ4o4EK6wA" name="getVertexNormals">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0XZELEemtHZ4o4EK6wA" annotatedElement="_LVW0XJELEemtHZ4o4EK6wA">
+                <body>Gets all vertex normals for a given renderable object. The normals are added to a vector, 3 elements (x, y, z) per vertex following each others:&#xD;
+** V1x, V1y, V1z, V2x, V2y, V2z, ... Vnx, Vny, Vnz</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0XpELEemtHZ4o4EK6wA" type="_zXg3wJDhEemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0X5ELEemtHZ4o4EK6wA" name="getVertexTextureCoordinates">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0YJELEemtHZ4o4EK6wA" annotatedElement="_LVW0X5ELEemtHZ4o4EK6wA">
+                <body>Gets all vertex texture coordinates for a given renderable object. The coordinates are added to a vector, 2 elements (x, y) per vertex following each others:&#xD;
+** V1x, V1y, V2x, V2y, ... Vnx, Vny</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0YZELEemtHZ4o4EK6wA" type="_eWNnMJDsEemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0YpELEemtHZ4o4EK6wA" name="getObjectVertexIndices">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0Y5ELEemtHZ4o4EK6wA" annotatedElement="_LVW0YpELEemtHZ4o4EK6wA">
+                <body>Gets a vector with the vertex indices and their order, which needs to be followed in order to draw the object</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0ZJELEemtHZ4o4EK6wA" type="_vM4XcJDuEemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_9bf2oJEMEemtHZ4o4EK6wA" memberEnd="_9bgdspEMEemtHZ4o4EK6wA _9bhEwpEMEemtHZ4o4EK6wA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9bgdsJEMEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9bgdsZEMEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_9bhEwpEMEemtHZ4o4EK6wA" name="xfbxmodelloader" type="_QglqcJEIEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA"/>
     </packagedElement>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Z53xQDhkEemJ9Iqu6RJn7w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Z55mcDhkEemJ9Iqu6RJn7w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -1145,6 +1430,37 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
   <C_Cpp:Const xmi:id="_2nrmAI6GEemW9p4WMdxRmw" base_operation="_2nmtgI6GEemW9p4WMdxRmw"/>
   <C_Cpp:Const xmi:id="_2nsNEI6GEemW9p4WMdxRmw" base_operation="_2nnUkI6GEemW9p4WMdxRmw"/>
   <C_Cpp:Const xmi:id="_2nsNEY6GEemW9p4WMdxRmw" base_operation="_2npJwI6GEemW9p4WMdxRmw"/>
-  <C_Cpp:Ptr xmi:id="_WRQb0I6HEemW9p4WMdxRmw" base_property="__huv4I6GEemW9p4WMdxRmw"/>
+  <C_Cpp:Ptr xmi:id="_WRQb0I6HEemW9p4WMdxRmw" base_property="__huv4I6GEemW9p4WMdxRmw" declaration=""/>
   <C_Cpp:Typedef xmi:id="_EsKMYI6SEemW9p4WMdxRmw" definition="XVector&lt;IXMaterialSharedPtr>" base_primitivetype="_EsJlUI6SEemW9p4WMdxRmw"/>
+  <C_Cpp:Ptr xmi:id="_QUxK4JDaEemtHZ4o4EK6wA" base_property="_QRks8pDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QU_NUJDaEemtHZ4o4EK6wA" base_operation="_QRks_ZDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QVAbcJDaEemtHZ4o4EK6wA" base_operation="_QRktAJDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QVBCgJDaEemtHZ4o4EK6wA" base_operation="_QRktA5DaEemtHZ4o4EK6wA"/>
+  <standard:Destroy xmi:id="_QVBpkJDaEemtHZ4o4EK6wA" base_BehavioralFeature="_QRktBpDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_QVC3sJDaEemtHZ4o4EK6wA" definition="XSharedPtr&lt;XOpenGlesMaterial>" base_primitivetype="_QRktB5DaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QVEF0JDaEemtHZ4o4EK6wA" base_operation="_QRktFJDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QVFT8JDaEemtHZ4o4EK6wA" base_operation="_QRktF5DaEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_QVF7AJDaEemtHZ4o4EK6wA" base_operation="_QRktGpDaEemtHZ4o4EK6wA"/>
+  <C_Cpp:NoCodeGen xmi:id="_1B2kkJDfEemtHZ4o4EK6wA" base_element="_vacQIJDfEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_R2zhMJDhEemtHZ4o4EK6wA" definition="XVector&lt;XFloat>" base_primitivetype="_EuEJUJDhEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_gkVFkpDhEemtHZ4o4EK6wA" definition="XVector&lt;XFloat>" base_primitivetype="_gkVFkJDhEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_zXg3wpDhEemtHZ4o4EK6wA" definition="XVector&lt;XFloat>" base_primitivetype="_zXg3wJDhEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_eWO1UJDsEemtHZ4o4EK6wA" definition="XVector&lt;XFloat>" base_primitivetype="_eWNnMJDsEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_XjrG8JDtEemtHZ4o4EK6wA" base_operation="_HsSqcJDgEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_4hOGEJDtEemtHZ4o4EK6wA" base_operation="_4hLCwJDtEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_KOpxIJDuEemtHZ4o4EK6wA" base_operation="_KOpKEJDuEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_WfKggJDuEemtHZ4o4EK6wA" base_operation="_WfIrUJDuEemtHZ4o4EK6wA"/>
+  <C_Cpp:Typedef xmi:id="_vM4-gJDuEemtHZ4o4EK6wA" definition="XVector&lt;XInt>" base_primitivetype="_vM4XcJDuEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="__72PIJDuEemtHZ4o4EK6wA" base_operation="__70Z8JDuEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_kD88YJEIEemtHZ4o4EK6wA" base_operation="_kD4D4JEIEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_kD9jcJEIEemtHZ4o4EK6wA" base_operation="_kD4q8JEIEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_kD-KgJEIEemtHZ4o4EK6wA" base_operation="_kD55EJEIEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_kD-KgZEIEemtHZ4o4EK6wA" base_operation="_kD7HMJEIEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_kD-KgpEIEemtHZ4o4EK6wA" base_operation="_kD8VUJEIEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_LVYCcJELEemtHZ4o4EK6wA" base_operation="_LVW0VpELEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_LVYCcZELEemtHZ4o4EK6wA" base_operation="_LVW0WZELEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_LVYpgJELEemtHZ4o4EK6wA" base_operation="_LVW0XJELEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_LVYpgZELEemtHZ4o4EK6wA" base_operation="_LVW0X5ELEemtHZ4o4EK6wA"/>
+  <C_Cpp:Const xmi:id="_LVZQkJELEemtHZ4o4EK6wA" base_operation="_LVW0YpELEemtHZ4o4EK6wA"/>
+  <C_Cpp:Ptr xmi:id="_MaGj8JENEemtHZ4o4EK6wA" base_property="_9bgdspEMEemtHZ4o4EK6wA"/>
 </xmi:XMI>
