@@ -230,6 +230,9 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_PbDFIDEVEemPSJ3g7P3waw" name="XCommonTypedefs">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_21vaMJmJEemPjaTn7FvIRA" annotatedElement="_PbDFIDEVEemPSJ3g7P3waw">
+          <body>Type definitions for commonly used types</body>
+        </ownedComment>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_UiccwDEVEemPSJ3g7P3waw" name="XVoid"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_w0v1UDZmEemwVeeG6mXgJQ" name="XBool"/>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_a1Th8DEVEemPSJ3g7P3waw" name="XFloat"/>
@@ -365,8 +368,16 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
           <body>Typedefs for the third party libraries types</body>
         </ownedComment>
         <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_E8vFYDRFEem9jI_jcJnhpA" name="GLFWwindow"/>
+        <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2xFk4JmjEemPjaTn7FvIRA" name="XMat4X4F">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_EdRoEJmkEemPjaTn7FvIRA" annotatedElement="_2xFk4JmjEemPjaTn7FvIRA">
+            <body>4x4 floating point type matrix</body>
+          </ownedComment>
+        </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_hZK7kDg8EemJ9Iqu6RJn7w" name="XApplication">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_96CjYJmJEemPjaTn7FvIRA" annotatedElement="_hZK7kDg8EemJ9Iqu6RJn7w">
+          <body>The components, building an executable application</body>
+        </ownedComment>
         <packagedElement xmi:type="uml:Class" xmi:id="_NfdxgDZgEemwVeeG6mXgJQ" name="XApplication">
           <ownedComment xmi:type="uml:Comment" xmi:id="_6D9loDZgEemwVeeG6mXgJQ" annotatedElement="_NfdxgDZgEemwVeeG6mXgJQ">
             <body>This class handles the creation of the rendering application. It contains the main entry point function. The application handles the init/deinitialization of the rendering system, creation of the rendering context, the rendering itself, managing of the buffers, input handling and handling of internal messages and signals</body>
@@ -719,6 +730,9 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_cO854FnwEemQdatIlMvaCg" name="XShading">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_BhVaMJmKEemPjaTn7FvIRA" annotatedElement="_cO854FnwEemQdatIlMvaCg">
+          <body>Components, related to the shaders</body>
+        </ownedComment>
         <packagedElement xmi:type="uml:Interface" xmi:id="_randsFnuEemQdatIlMvaCg" name="IXShader" isAbstract="true">
           <ownedComment xmi:type="uml:Comment" xmi:id="_LosuwFnvEemQdatIlMvaCg" annotatedElement="_randsFnuEemQdatIlMvaCg">
             <body>Provides interfaces to load and compile shaders, track the shader id and the compile-time errors</body>
@@ -1140,6 +1154,9 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_vacQIJDfEemtHZ4o4EK6wA" name="XRenderableObjects">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_GiBs4JmKEemPjaTn7FvIRA" annotatedElement="_vacQIJDfEemtHZ4o4EK6wA">
+          <body>Objects that can be rendered by the renderers </body>
+        </ownedComment>
         <packagedElement xmi:type="uml:Interface" xmi:id="_514UQJDfEemtHZ4o4EK6wA" name="IXModelLoader" isAbstract="true">
           <ownedComment xmi:type="uml:Comment" xmi:id="_d3WXYJDgEemtHZ4o4EK6wA" annotatedElement="_514UQJDfEemtHZ4o4EK6wA">
             <body>Provides methods for loading an object properties like vertex positions, colors, normals, texture coordinates, etc. from external source like file or database&#xD;
@@ -1187,45 +1204,6 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="__70Z8pDuEemtHZ4o4EK6wA" type="_vM4XcJDuEemtHZ4o4EK6wA" direction="return"/>
           </ownedOperation>
         </packagedElement>
-        <packagedElement xmi:type="uml:Class" xmi:id="_QglqcJEIEemtHZ4o4EK6wA" name="XFbxModelLoader">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wJEIEemtHZ4o4EK6wA" annotatedElement="_514UQJDfEemtHZ4o4EK6wA">
-            <body>Provides methods for loading an object properties like vertex positions, colors, normals, texture coordinates, etc. from .fbx file&#xD;
-</body>
-          </ownedComment>
-          <generalization xmi:type="uml:Generalization" xmi:id="_SsO-YJHTEemtHZ4o4EK6wA" general="_ebhpUJHOEemtHZ4o4EK6wA"/>
-          <ownedAttribute xmi:type="uml:Property" xmi:id="_9bgdspEMEemtHZ4o4EK6wA" name="mFbxMOdelLoaderImpl" visibility="private" type="_LVW0UJELEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA">
-            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9bhEwJEMEemtHZ4o4EK6wA"/>
-            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9bhEwZEMEemtHZ4o4EK6wA" value="1"/>
-          </ownedAttribute>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Uo1csJHNEemtHZ4o4EK6wA" name="XFbxModelLoader">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iKtGQJHNEemtHZ4o4EK6wA" name="aModelFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_GCKHMJHNEemtHZ4o4EK6wA" name="XFbxModelLoader"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD21wZEIEemtHZ4o4EK6wA" name="loadModel">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wpEIEemtHZ4o4EK6wA" annotatedElement="_kD21wZEIEemtHZ4o4EK6wA">
-              <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD21w5EIEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
-          </ownedOperation>
-          <nestedClassifier xmi:type="uml:Class" xmi:id="_LVW0UJELEemtHZ4o4EK6wA" name="XFbxModelLoaderImpl" visibility="private">
-            <ownedAttribute xmi:type="uml:Property" xmi:id="_2fcKwJHNEemtHZ4o4EK6wA" name="mModelFilePath" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_vmt_cJHNEemtHZ4o4EK6wA" name="XFbxModelLoaderImpl">
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_vmt_cZHNEemtHZ4o4EK6wA" name="aModelFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
-            </ownedOperation>
-            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0U5ELEemtHZ4o4EK6wA" name="loadModel">
-              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0VJELEemtHZ4o4EK6wA" annotatedElement="_LVW0U5ELEemtHZ4o4EK6wA">
-                <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
-              </ownedComment>
-              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0VZELEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
-            </ownedOperation>
-          </nestedClassifier>
-          <nestedClassifier xmi:type="uml:Association" xmi:id="_9bf2oJEMEemtHZ4o4EK6wA" memberEnd="_9bgdspEMEemtHZ4o4EK6wA _9bhEwpEMEemtHZ4o4EK6wA">
-            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9bgdsJEMEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
-              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9bgdsZEMEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
-            </eAnnotations>
-            <ownedEnd xmi:type="uml:Property" xmi:id="_9bhEwpEMEemtHZ4o4EK6wA" name="xfbxmodelloader" type="_QglqcJEIEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA"/>
-          </nestedClassifier>
-        </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_ebhpUJHOEemtHZ4o4EK6wA" name="XModelLoaderCommon">
           <ownedComment xmi:type="uml:Comment" xmi:id="_JqGhcJHREemtHZ4o4EK6wA" annotatedElement="_ebhpUJHOEemtHZ4o4EK6wA">
             <body>Implements the methods for getting the vectors with the vertices properties, since this is going to be common for all other model loaders</body>
@@ -1269,6 +1247,12 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             </ownedComment>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_soAWIpHOEemtHZ4o4EK6wA" type="_vM4XcJDuEemtHZ4o4EK6wA" direction="return"/>
           </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_3E4YsJmlEemPjaTn7FvIRA" name="loadModel" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_3E-fUJmlEemPjaTn7FvIRA" annotatedElement="_3E4YsJmlEemPjaTn7FvIRA">
+              <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_3E-fUZmlEemPjaTn7FvIRA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
           <nestedClassifier xmi:type="uml:Class" xmi:id="_M_1RsJHSEemtHZ4o4EK6wA" name="XModelLoaderCommonImpl" visibility="private">
             <ownedAttribute xmi:type="uml:Property" xmi:id="_wL-Z4JHTEemtHZ4o4EK6wA" name="mVertexPosition" visibility="private" type="_EuEJUJDhEemtHZ4o4EK6wA"/>
             <ownedAttribute xmi:type="uml:Property" xmi:id="_6yVUkJHTEemtHZ4o4EK6wA" name="mVertexColors" visibility="private" type="_gkVFkJDhEemtHZ4o4EK6wA"/>
@@ -1311,9 +1295,58 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             </ownedOperation>
           </nestedClassifier>
         </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_qGgF4JHSEemtHZ4o4EK6wA" memberEnd="_qGhUAJHSEemtHZ4o4EK6wA _qGhUA5HSEemtHZ4o4EK6wA">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qGgs8JHSEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qGgs8ZHSEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_qGhUA5HSEemtHZ4o4EK6wA" name="xmodelloadercommon" type="_ebhpUJHOEemtHZ4o4EK6wA" association="_qGgF4JHSEemtHZ4o4EK6wA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_QglqcJEIEemtHZ4o4EK6wA" name="XFbxModelLoader">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wJEIEemtHZ4o4EK6wA" annotatedElement="_514UQJDfEemtHZ4o4EK6wA">
+            <body>Provides methods for loading an object properties like vertex positions, colors, normals, texture coordinates, etc. from .fbx file&#xD;
+</body>
+          </ownedComment>
+          <generalization xmi:type="uml:Generalization" xmi:id="_SsO-YJHTEemtHZ4o4EK6wA" general="_ebhpUJHOEemtHZ4o4EK6wA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_9bgdspEMEemtHZ4o4EK6wA" name="mFbxModelLoaderImpl" visibility="private" type="_LVW0UJELEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_9bhEwJEMEemtHZ4o4EK6wA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9bhEwZEMEemtHZ4o4EK6wA" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Uo1csJHNEemtHZ4o4EK6wA" name="XFbxModelLoader">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_iKtGQJHNEemtHZ4o4EK6wA" name="aModelFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_GCKHMJHNEemtHZ4o4EK6wA" name="XFbxModelLoader"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_kD21wZEIEemtHZ4o4EK6wA" name="loadModel">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_kD21wpEIEemtHZ4o4EK6wA" annotatedElement="_kD21wZEIEemtHZ4o4EK6wA">
+              <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_kD21w5EIEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+          </ownedOperation>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_LVW0UJELEemtHZ4o4EK6wA" name="XFbxModelLoaderImpl" visibility="private">
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_2fcKwJHNEemtHZ4o4EK6wA" name="mModelFilePath" visibility="private" type="_SVCZ8DOaEemHGoXhG_mZKw">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_BbXP8JP2EemeCehGVyJuGQ" annotatedElement="_2fcKwJHNEemtHZ4o4EK6wA">
+                <body>Internal implementation of the XFbxModelLoader class</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_vmt_cJHNEemtHZ4o4EK6wA" name="XFbxModelLoaderImpl">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_vmt_cZHNEemtHZ4o4EK6wA" name="aModelFilePath" type="_SVCZ8DOaEemHGoXhG_mZKw"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_LVW0U5ELEemtHZ4o4EK6wA" name="loadModel">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_LVW0VJELEemtHZ4o4EK6wA" annotatedElement="_LVW0U5ELEemtHZ4o4EK6wA">
+                <body>Loads the model from external source like file or database. Should be called prior to getting any information about the object model</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_LVW0VZELEemtHZ4o4EK6wA" type="_RsLcMJD6EemtHZ4o4EK6wA" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Association" xmi:id="_9bf2oJEMEemtHZ4o4EK6wA" memberEnd="_9bgdspEMEemtHZ4o4EK6wA _9bhEwpEMEemtHZ4o4EK6wA">
+            <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9bgdsJEMEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
+              <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9bgdsZEMEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
+            </eAnnotations>
+            <ownedEnd xmi:type="uml:Property" xmi:id="_9bhEwpEMEemtHZ4o4EK6wA" name="xfbxmodelloader" type="_QglqcJEIEemtHZ4o4EK6wA" association="_9bf2oJEMEemtHZ4o4EK6wA"/>
+          </nestedClassifier>
+        </packagedElement>
         <packagedElement xmi:type="uml:Interface" xmi:id="_r3wFAJJqEemtHZ4o4EK6wA" name="IXRenderableObject" isAbstract="true">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Cr4kIJJrEemtHZ4o4EK6wA" annotatedElement="_r3wFAJJqEemtHZ4o4EK6wA">
-            <body>Provides methods to render a given object</body>
+            <body>Provides methods manipulate a given object and gets the data needed to render that object</body>
           </ownedComment>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_4WcIYJJsEemtHZ4o4EK6wA" name="IXRenderableObjectSharedPtr">
             <ownedComment xmi:type="uml:Comment" xmi:id="_SbygoJJtEemtHZ4o4EK6wA" annotatedElement="_4WcIYJJsEemtHZ4o4EK6wA">
@@ -1321,12 +1354,6 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             </ownedComment>
           </nestedClassifier>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_4hW0YJJrEemtHZ4o4EK6wA" name="IXRenderableObject"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_BajpsJJsEemtHZ4o4EK6wA" name="renderObject" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_HocIQJJsEemtHZ4o4EK6wA" annotatedElement="_BajpsJJsEemtHZ4o4EK6wA">
-              <body>Renders the given object</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_WVjc8JJsEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_RdGuAJJxEemtHZ4o4EK6wA" name="setLocation" isAbstract="true">
             <ownedComment xmi:type="uml:Comment" xmi:id="_2TO5sJKcEemtHZ4o4EK6wA" annotatedElement="_RdGuAJJxEemtHZ4o4EK6wA">
               <body>Sets the location of the object in the 3D space</body>
@@ -1348,101 +1375,153 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uks3oJKeEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_YwuzMJKeEemtHZ4o4EK6wA" name="aRotationAngles" type="_zGzkgJKdEemtHZ4o4EK6wA"/>
           </ownedOperation>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Association" xmi:id="_qGgF4JHSEemtHZ4o4EK6wA" memberEnd="_qGhUAJHSEemtHZ4o4EK6wA _qGhUA5HSEemtHZ4o4EK6wA">
-          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qGgs8JHSEemtHZ4o4EK6wA" source="org.eclipse.papyrus">
-            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qGgs8ZHSEemtHZ4o4EK6wA" key="nature" value="UML_Nature"/>
-          </eAnnotations>
-          <ownedEnd xmi:type="uml:Property" xmi:id="_qGhUA5HSEemtHZ4o4EK6wA" name="xmodelloadercommon" type="_ebhpUJHOEemtHZ4o4EK6wA" association="_qGgF4JHSEemtHZ4o4EK6wA"/>
-        </packagedElement>
-        <packagedElement xmi:type="uml:Interface" xmi:id="_PlUbMJNcEemb1_90uLdw6Q" name="IXRenderableShapeObject">
-          <ownedComment xmi:type="uml:Comment" xmi:id="_qlK3YJNdEemb1_90uLdw6Q" annotatedElement="_r3wFAJJqEemtHZ4o4EK6wA">
-            <body>Provides methods to render a shape object like triangle, rectangle, cube, etc.</body>
-          </ownedComment>
-          <generalization xmi:type="uml:Generalization" xmi:id="_auzREJNcEemb1_90uLdw6Q" general="_r3wFAJJqEemtHZ4o4EK6wA"/>
-          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_peZSAJNcEemb1_90uLdw6Q" name="IXRenderableShapeObjectSharedPtr">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_peZSAZNcEemb1_90uLdw6Q" annotatedElement="_peZSAJNcEemb1_90uLdw6Q">
-              <body>One renderable object can be attached to multiple places, that is why shared_ptr is used</body>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_BajpsJJsEemtHZ4o4EK6wA" name="renderObject" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_HocIQJJsEemtHZ4o4EK6wA" annotatedElement="_BajpsJJsEemtHZ4o4EK6wA">
+              <body>Renders the object by using the Renderer, attached to this object</body>
             </ownedComment>
-          </nestedClassifier>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_pfdMgJNdEemb1_90uLdw6Q" name="IXRenderableObject"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_pfjTIJNdEemb1_90uLdw6Q" name="renderObject" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_pfjTIZNdEemb1_90uLdw6Q" annotatedElement="_pfjTIJNdEemb1_90uLdw6Q">
-              <body>Renders the given object</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfjTIpNdEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_WVjc8JJsEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_pfjTI5NdEemb1_90uLdw6Q" name="setLocation" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_pfjTJJNdEemb1_90uLdw6Q" annotatedElement="_pfjTI5NdEemb1_90uLdw6Q">
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Jo-CIJmqEemPjaTn7FvIRA" name="XRenderableObjectCommon">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_6lJZcJmwEemPjaTn7FvIRA" annotatedElement="_Jo-CIJmqEemPjaTn7FvIRA">
+            <body>Provides implementation of the common methods for rendering an object</body>
+          </ownedComment>
+          <generalization xmi:type="uml:Generalization" xmi:id="_QDLoUJmxEemPjaTn7FvIRA" general="_r3wFAJJqEemtHZ4o4EK6wA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_kIzdUJmyEem0VtW0tWWgeg" name="mXRenderableObjectCommonImpl" visibility="private" type="_SuoFcJmyEem0VtW0tWWgeg" association="_kIxBEJmyEem0VtW0tWWgeg">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kI0EYJmyEem0VtW0tWWgeg"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kI0rcJmyEem0VtW0tWWgeg" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_6lPgEJmwEemPjaTn7FvIRA" name="renderObject" isAbstract="true">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_6lPgEZmwEemPjaTn7FvIRA" annotatedElement="_6lPgEJmwEemPjaTn7FvIRA">
+              <body>Renders the object by using the Renderer, attached to this object</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lPgEpmwEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_6lJZdJmwEemPjaTn7FvIRA" name="setLocation">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_6lJZdZmwEemPjaTn7FvIRA" annotatedElement="_6lJZdJmwEemPjaTn7FvIRA">
               <body>Sets the location of the object in the 3D space</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfjTJZNdEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfjTJpNdEemb1_90uLdw6Q" name="aLocation" type="_bjm7kJJ_EemtHZ4o4EK6wA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZdpmwEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZd5mwEemPjaTn7FvIRA" name="aLocation" type="_bjm7kJJ_EemtHZ4o4EK6wA"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_pfjTJ5NdEemb1_90uLdw6Q" name="setSize" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_pfjTKJNdEemb1_90uLdw6Q" annotatedElement="_pfjTJ5NdEemb1_90uLdw6Q">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_6lJZeJmwEemPjaTn7FvIRA" name="setSize">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_6lJZeZmwEemPjaTn7FvIRA" annotatedElement="_6lJZeJmwEemPjaTn7FvIRA">
               <body>Sets the size of the object. This might scale the object. </body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfjTKZNdEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfjTKpNdEemb1_90uLdw6Q" name="aSize" type="_-NsoIJKXEemtHZ4o4EK6wA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZepmwEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZe5mwEemPjaTn7FvIRA" name="aSize" type="_-NsoIJKXEemtHZ4o4EK6wA"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_pfpZwJNdEemb1_90uLdw6Q" name="setRotation" isAbstract="true">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_pfpZwZNdEemb1_90uLdw6Q" annotatedElement="_pfpZwJNdEemb1_90uLdw6Q">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_6lJZfJmwEemPjaTn7FvIRA" name="setRotation">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_6lJZfZmwEemPjaTn7FvIRA" annotatedElement="_6lJZfJmwEemPjaTn7FvIRA">
               <body>Sets the rotation of the object in the 3D space</body>
             </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfpZwpNdEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pfpZw5NdEemb1_90uLdw6Q" name="aRotationAngles" type="_zGzkgJKdEemtHZ4o4EK6wA"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZfpmwEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_6lJZf5mwEemPjaTn7FvIRA" name="aRotationAngles" type="_zGzkgJKdEemtHZ4o4EK6wA"/>
           </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_7AA5MJNdEemb1_90uLdw6Q" name="setColor" isAbstract="true">
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_xF2EMJNfEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_0mfgcJNfEemb1_90uLdw6Q" name="aColor" type="_AwAh4JNeEemb1_90uLdw6Q"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_YJPekJmzEem0VtW0tWWgeg" name="getTransformationMatrix">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_eFyVgJmzEem0VtW0tWWgeg" type="_2xFk4JmjEemPjaTn7FvIRA" direction="return"/>
           </ownedOperation>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_SuoFcJmyEem0VtW0tWWgeg" name="XRenderableObjectCommonImpl" visibility="private">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_f6V40JmyEem0VtW0tWWgeg" annotatedElement="_SuoFcJmyEem0VtW0tWWgeg">
+              <body>Provides implementation of the common methods for rendering an object</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_OHV70JmzEem0VtW0tWWgeg" name="mTransformationMatrix" visibility="private" type="_2xFk4JmjEemPjaTn7FvIRA"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_iGJCAJmyEem0VtW0tWWgeg" name="setLocation">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_iGJCAZmyEem0VtW0tWWgeg" annotatedElement="_iGJCAJmyEem0VtW0tWWgeg">
+                <body>Sets the location of the object in the 3D space</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGJCApmyEem0VtW0tWWgeg" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGJCA5myEem0VtW0tWWgeg" name="aLocation" type="_bjm7kJJ_EemtHZ4o4EK6wA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_iGLeQJmyEem0VtW0tWWgeg" name="setSize">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_iGLeQZmyEem0VtW0tWWgeg" annotatedElement="_iGLeQJmyEem0VtW0tWWgeg">
+                <body>Sets the size of the object. This might scale the object. </body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGLeQpmyEem0VtW0tWWgeg" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGLeQ5myEem0VtW0tWWgeg" name="aSize" type="_-NsoIJKXEemtHZ4o4EK6wA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_iGNTcJmyEem0VtW0tWWgeg" name="setRotation">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_iGNTcZmyEem0VtW0tWWgeg" annotatedElement="_iGNTcJmyEem0VtW0tWWgeg">
+                <body>Sets the rotation of the object in the 3D space</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGNTcpmyEem0VtW0tWWgeg" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_iGNTc5myEem0VtW0tWWgeg" name="aRotationAngles" type="_zGzkgJKdEemtHZ4o4EK6wA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_jmasgJmzEem0VtW0tWWgeg" name="getTransformationMatrix">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_jmasgZmzEem0VtW0tWWgeg" type="_2xFk4JmjEemPjaTn7FvIRA" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_kIxBEJmyEem0VtW0tWWgeg" memberEnd="_kIzdUJmyEem0VtW0tWWgeg _kI0rcZmyEem0VtW0tWWgeg">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kIyPMJmyEem0VtW0tWWgeg" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kIy2QJmyEem0VtW0tWWgeg" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_kI0rcZmyEem0VtW0tWWgeg" name="xrenderableobjectcommon" type="_Jo-CIJmqEemPjaTn7FvIRA" association="_kIxBEJmyEem0VtW0tWWgeg"/>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_y9vSoJKeEemtHZ4o4EK6wA" name="XTriangle">
           <ownedComment xmi:type="uml:Comment" xmi:id="_Gswa8JKfEemtHZ4o4EK6wA" annotatedElement="_r3wFAJJqEemtHZ4o4EK6wA">
             <body>Provides methods to render a triangle object</body>
           </ownedComment>
-          <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_eJs4YJNhEemb1_90uLdw6Q" client="_y9vSoJKeEemtHZ4o4EK6wA" supplier="_PlUbMJNcEemb1_90uLdw6Q" contract="_PlUbMJNcEemb1_90uLdw6Q"/>
+          <generalization xmi:type="uml:Generalization" xmi:id="_t5CdwJmxEemPjaTn7FvIRA" general="_Jo-CIJmqEemPjaTn7FvIRA"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_oZIFEJP2EemeCehGVyJuGQ" name="mXTriangleimpl" visibility="private" type="_zm0iAJP1EemeCehGVyJuGQ" association="_oYyt4JP2EemeCehGVyJuGQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oZIsIJP2EemeCehGVyJuGQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oZIsIZP2EemeCehGVyJuGQ" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ASuM0JmcEemPjaTn7FvIRA" name="XTriangle">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_HdWngJmcEemPjaTn7FvIRA" name="aRenderer" type="_j35asJmKEemPjaTn7FvIRA"/>
+          </ownedOperation>
           <ownedOperation xmi:type="uml:Operation" xmi:id="_GsxpEJKfEemtHZ4o4EK6wA" name="XTriangle"/>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_GsyQIJKfEemtHZ4o4EK6wA" name="renderObject">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_GsyQIZKfEemtHZ4o4EK6wA" annotatedElement="_GsyQIJKfEemtHZ4o4EK6wA">
-              <body>Renders the given object</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_GsyQIpKfEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Gs0FUJKfEemtHZ4o4EK6wA" name="setLocation">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Gs0FUZKfEemtHZ4o4EK6wA" annotatedElement="_Gs0FUJKfEemtHZ4o4EK6wA">
-              <body>Sets the location of the object in the 3D space</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs0FUpKfEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs0FU5KfEemtHZ4o4EK6wA" name="aLocation" type="_bjm7kJJ_EemtHZ4o4EK6wA"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Gs1TcJKfEemtHZ4o4EK6wA" name="setSize">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Gs1TcZKfEemtHZ4o4EK6wA" annotatedElement="_Gs1TcJKfEemtHZ4o4EK6wA">
-              <body>Sets the size of the object. This might scale the object. </body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs1TcpKfEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs1Tc5KfEemtHZ4o4EK6wA" name="aSize" type="_-NsoIJKXEemtHZ4o4EK6wA"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_Gs3IoJKfEemtHZ4o4EK6wA" name="setRotation">
-            <ownedComment xmi:type="uml:Comment" xmi:id="_Gs3IoZKfEemtHZ4o4EK6wA" annotatedElement="_Gs3IoJKfEemtHZ4o4EK6wA">
-              <body>Sets the rotation of the object in the 3D space</body>
-            </ownedComment>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs3IopKfEemtHZ4o4EK6wA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
-            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Gs3Io5KfEemtHZ4o4EK6wA" name="aRotationAngles" type="_zGzkgJKdEemtHZ4o4EK6wA"/>
-          </ownedOperation>
-          <ownedOperation xmi:type="uml:Operation" xmi:id="_jSxD9JNhEemb1_90uLdw6Q" name="setColor" isAbstract="true">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_jSxD9JNhEemb1_90uLdw6Q" name="setColor">
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_jSxD9ZNhEemb1_90uLdw6Q" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
             <ownedParameter xmi:type="uml:Parameter" xmi:id="_jSxD9pNhEemb1_90uLdw6Q" name="aColor" type="_AwAh4JNeEemb1_90uLdw6Q"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_gegNQJmbEemPjaTn7FvIRA" name="renderObject">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_gegNQZmbEemPjaTn7FvIRA" annotatedElement="_gegNQJmbEemPjaTn7FvIRA">
+              <body>Renders the object by using the Renderer, attached to this object</body>
+            </ownedComment>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_gegNQpmbEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
           </ownedOperation>
           <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_GsxCAJKfEemtHZ4o4EK6wA" name="XTriangleSharedPtr">
             <ownedComment xmi:type="uml:Comment" xmi:id="_GsxCAZKfEemtHZ4o4EK6wA" annotatedElement="_GsxCAJKfEemtHZ4o4EK6wA">
               <body>One renderable object can be attached to multiple places, that is why shared_ptr is used</body>
             </ownedComment>
           </nestedClassifier>
+          <nestedClassifier xmi:type="uml:Class" xmi:id="_zm0iAJP1EemeCehGVyJuGQ" name="XTriangleImpl" visibility="private">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_62EW8JP1EemeCehGVyJuGQ" annotatedElement="_zm0iAJP1EemeCehGVyJuGQ">
+              <body>Internal implementation of the XTriangle class</body>
+            </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="_eIDd0JmcEemPjaTn7FvIRA" name="mRenderer" visibility="private" type="_j35asJmKEemPjaTn7FvIRA">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_oCyBkJmcEemPjaTn7FvIRA" annotatedElement="_eIDd0JmcEemPjaTn7FvIRA">
+                <body>Holds the renderer, that will render this object</body>
+              </ownedComment>
+            </ownedAttribute>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_QMYNIJmcEemPjaTn7FvIRA" name="XTriangleImpl">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_Uo-7UJmcEemPjaTn7FvIRA" name="aRenderer" type="_j35asJmKEemPjaTn7FvIRA"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lNz_oJP2EemeCehGVyJuGQ" name="XTriangleImpl"/>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_lN77cJP2EemeCehGVyJuGQ" name="setColor">
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_lN77cZP2EemeCehGVyJuGQ" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_lN77cpP2EemeCehGVyJuGQ" name="aColor" type="_AwAh4JNeEemb1_90uLdw6Q"/>
+            </ownedOperation>
+            <ownedOperation xmi:type="uml:Operation" xmi:id="_ie8bAJmbEemPjaTn7FvIRA" name="renderObject">
+              <ownedComment xmi:type="uml:Comment" xmi:id="_ie8bAZmbEemPjaTn7FvIRA" annotatedElement="_ie8bAJmbEemPjaTn7FvIRA">
+                <body>Renders the object by using the Renderer, attached to this object</body>
+              </ownedComment>
+              <ownedParameter xmi:type="uml:Parameter" xmi:id="_ie8bApmbEemPjaTn7FvIRA" type="_UiccwDEVEemPSJ3g7P3waw" direction="return"/>
+            </ownedOperation>
+          </nestedClassifier>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_oYyt4JP2EemeCehGVyJuGQ" memberEnd="_oZIFEJP2EemeCehGVyJuGQ _oZJTMJP2EemeCehGVyJuGQ">
+          <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oYz8AJP2EemeCehGVyJuGQ" source="org.eclipse.papyrus">
+            <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oY0jEJP2EemeCehGVyJuGQ" key="nature" value="UML_Nature"/>
+          </eAnnotations>
+          <ownedEnd xmi:type="uml:Property" xmi:id="_oZJTMJP2EemeCehGVyJuGQ" name="xtriangle" type="_y9vSoJKeEemtHZ4o4EK6wA" association="_oYyt4JP2EemeCehGVyJuGQ"/>
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_qdsnMJJ9EemtHZ4o4EK6wA" name="XObjectProperties">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LhWGkJmKEemPjaTn7FvIRA" annotatedElement="_qdsnMJJ9EemtHZ4o4EK6wA">
+          <body>Components for defining object properties</body>
+        </ownedComment>
         <packagedElement xmi:type="uml:DataType" xmi:id="_bjm7kJJ_EemtHZ4o4EK6wA" name="Location">
           <ownedComment xmi:type="uml:Comment" xmi:id="_zErKcJKFEemtHZ4o4EK6wA" annotatedElement="_bjm7kJJ_EemtHZ4o4EK6wA">
             <body>Location of the object in the 3D space</body>
@@ -1527,6 +1606,21 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
               <body>The value of the Alpha Channel. Should be between 0.0 and 1.0</body>
             </ownedComment>
           </ownedAttribute>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_rDzdMJmJEemPjaTn7FvIRA" name="XRenderer">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_QH8eQJmKEemPjaTn7FvIRA" annotatedElement="_rDzdMJmJEemPjaTn7FvIRA">
+          <body>Objects, responsible for the rendering of the scenes</body>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_TpKiQJmKEemPjaTn7FvIRA" name="IXRenderer" isAbstract="true">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_aozN4JmKEemPjaTn7FvIRA" annotatedElement="_TpKiQJmKEemPjaTn7FvIRA">
+            <body>Provides interface methods for rendering the objects in a given scene</body>
+          </ownedComment>
+          <nestedClassifier xmi:type="uml:PrimitiveType" xmi:id="_j35asJmKEemPjaTn7FvIRA" name="IXRendererSharedPtr">
+            <ownedComment xmi:type="uml:Comment" xmi:id="_j35asZmKEemPjaTn7FvIRA" annotatedElement="_j35asJmKEemPjaTn7FvIRA">
+              <body>One renderer can be responsible for the rendering of multiple objects, that is why shared_ptr is used</body>
+            </ownedComment>
+          </nestedClassifier>
         </packagedElement>
       </packagedElement>
     </packagedElement>
@@ -1737,9 +1831,17 @@ using XSharedPtr = std::shared_ptr&lt;T>;</body>
   <C_Cpp:NoCodeGen xmi:id="_QWgJ8JJ_EemtHZ4o4EK6wA" base_element="_qdsnMJJ9EemtHZ4o4EK6wA"/>
   <C_Cpp:Typedef xmi:id="_Gs6zAJKfEemtHZ4o4EK6wA" definition="XSharedPtr&lt;XTriangle>" base_primitivetype="_GsxCAJKfEemtHZ4o4EK6wA"/>
   <standard:Destroy xmi:id="_Gs8BIJKfEemtHZ4o4EK6wA" base_BehavioralFeature="_GsxpEJKfEemtHZ4o4EK6wA"/>
-  <C_Cpp:Const xmi:id="_Gs92UJKfEemtHZ4o4EK6wA" base_operation="_GsyQIJKfEemtHZ4o4EK6wA"/>
-  <C_Cpp:Typedef xmi:id="_peZSApNcEemb1_90uLdw6Q" definition="XSharedPtr&lt;IXRenderableShapeObject>" base_primitivetype="_peZSAJNcEemb1_90uLdw6Q"/>
-  <standard:Destroy xmi:id="_pfvgYJNdEemb1_90uLdw6Q" base_BehavioralFeature="_pfdMgJNdEemb1_90uLdw6Q"/>
-  <C_Cpp:Virtual xmi:id="_pfvgYZNdEemb1_90uLdw6Q" base_operation="_pfdMgJNdEemb1_90uLdw6Q"/>
-  <C_Cpp:Const xmi:id="_pfvgYpNdEemb1_90uLdw6Q" base_operation="_pfjTIJNdEemb1_90uLdw6Q"/>
+  <standard:Destroy xmi:id="_lN--wJP2EemeCehGVyJuGQ" base_BehavioralFeature="_lNz_oJP2EemeCehGVyJuGQ"/>
+  <C_Cpp:Ptr xmi:id="_DMdSwJP5EemeCehGVyJuGQ" base_property="_oZIFEJP2EemeCehGVyJuGQ"/>
+  <C_Cpp:NoCodeGen xmi:id="_Ru08gJmKEemPjaTn7FvIRA" base_element="_rDzdMJmJEemPjaTn7FvIRA"/>
+  <C_Cpp:Typedef xmi:id="_j37P4JmKEemPjaTn7FvIRA" definition="XSharedPtr&lt;IXRenderer>" base_primitivetype="_j35asJmKEemPjaTn7FvIRA"/>
+  <C_Cpp:Const xmi:id="_gemT4JmbEemPjaTn7FvIRA" base_operation="_gegNQJmbEemPjaTn7FvIRA"/>
+  <C_Cpp:Const xmi:id="_ie9pIJmbEemPjaTn7FvIRA" base_operation="_ie8bAJmbEemPjaTn7FvIRA"/>
+  <standard:Create xmi:id="_JL9eYJmcEemPjaTn7FvIRA" base_BehavioralFeature="_ASuM0JmcEemPjaTn7FvIRA"/>
+  <standard:Create xmi:id="_WQH4QJmcEemPjaTn7FvIRA" base_BehavioralFeature="_QMYNIJmcEemPjaTn7FvIRA"/>
+  <C_Cpp:Typedef xmi:id="_GL_zsJmkEemPjaTn7FvIRA" definition="mat4" base_primitivetype="_2xFk4JmjEemPjaTn7FvIRA"/>
+  <C_Cpp:Const xmi:id="_6lVmsZmwEemPjaTn7FvIRA" base_operation="_6lPgEJmwEemPjaTn7FvIRA"/>
+  <C_Cpp:Ptr xmi:id="_1iuWgJmyEem0VtW0tWWgeg" base_property="_kIzdUJmyEem0VtW0tWWgeg"/>
+  <C_Cpp:Const xmi:id="_fsz9sJmzEem0VtW0tWWgeg" base_operation="_YJPekJmzEem0VtW0tWWgeg"/>
+  <C_Cpp:Const xmi:id="_jmeW4JmzEem0VtW0tWWgeg" base_operation="_jmasgJmzEem0VtW0tWWgeg"/>
 </xmi:XMI>
